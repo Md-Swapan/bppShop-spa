@@ -1,51 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
-import defaultAvater from '../../../Assets/Images/default-avatar.jpg'
+import defaultAvatar from "../../../Assets/Images/default-avatar.jpg";
 const Nav = () => {
   return (
     <>
       <div className="navbar-section">
         <nav className="nav">
-            <div className="nav-content">
-              <div className="logo">
-                <img className="bpshopsLogo" src="img/bppshops-logo.png" alt="" />
+          <div className="nav-content">
+            <div className="logo">
+              <img className="bpshopsLogo" src="img/bppshops-logo.png" alt="" />
 
-                <img className="bpshopsIcon" src="img/bpp_icon.png" alt="" />
-              </div>
+              <img className="bpshopsIcon" src="img/bpp_icon.png" alt="" />
+            </div>
 
-              <div className="searchInput">
-                <input
-                  type="text"
-                  name=""
-                  id="dynamic-placeholder"
-                  className="search"
-                  placeholder="Search by Product Category"
-                />
-                <span className="searchIcon">
-                  <i className="bi bi-search"></i>
-                </span>
-              </div>
+            <div className="searchInput">
+              <input
+                type="text"
+                name=""
+                id="dynamic-placeholder"
+                className="search"
+                placeholder="Search by Product Category"
+              />
+              <span className="searchIcon">
+                <i className="bi bi-search"></i>
+              </span>
+            </div>
 
-              <div className="userProfileTab">
-                <div
-                  className="user-profile "
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  {/* {agent.image ? (
+            <div className="userProfileTab">
+              <div
+                className="user-profile "
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                {/* {agent.image ? (
                     <img
                       src={`https://agentapi.bppshop.com.bd/${agent.image}`}
                       alt="profile"
                     />
                   ) : ( */}
-                    <img width={35} src={defaultAvater} alt="profile" />
-                  {/* )} */}
-                </div>
+                <img src={defaultAvatar} alt="profile" />
+                {/* )} */}
+              </div>
 
-
-                <div className="dropdown-menu profile_dropdown">
+              <div className="dropdown-menu profile_dropdown">
                 <div
                   className="d-flex mx-3"
                   style={{
@@ -62,7 +61,12 @@ const Nav = () => {
                       alt="profile"
                     />
                   ) : ( */}
-                    <img width="30" height="100%" src={defaultAvater} alt="profile" />
+                  <img
+                    width="30"
+                    height="100%"
+                    src={defaultAvatar}
+                    alt="profile"
+                  />
                   {/* )} */}
 
                   <h6>name</h6>
@@ -71,12 +75,10 @@ const Nav = () => {
                   <li className="dropdown-item">View Profile</li>
                 </Link>
                 {/* <li onClick={handleLogout} className="dropdown-item"> */}
-                <li className="dropdown-item">
-                  Logout
-                </li>
-              </div>
+                <li className="dropdown-item">Logout</li>
               </div>
             </div>
+          </div>
         </nav>
       </div>
     </>
