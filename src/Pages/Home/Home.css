@@ -58,21 +58,34 @@ hr:not([size]) {
 
 
 /* --------Catagory container design--------- */
-.catagory_container{
+.catagory_container {
     height: 500px;
-    width:100%;
-    border: 1px solid black;
+    width: 100%;
     margin: auto;
 }
-.catagory_containt{
-    width: 100%;
+
+.catagory_containt {
+    width: 80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-.card{
+
+.card {
     width: 300px;
     margin: 10px;
+}
+
+.card-footer {
+    background: #D7E4E8;
+    color: #2C2C2C;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    padding: 15px;
 }

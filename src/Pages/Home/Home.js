@@ -1,9 +1,15 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Nav from "../../Components/SharedComponents/Nav/Nav";
 import Sidebar from "../../Components/SharedComponents/Sidebar/Sidebar";
 import "./Home.css";
 
 const Home = () => {
+  const [cardDatas, setCardDatas] = useState([]);
+  // console.log(cardDatas);
+  useEffect(() => {
+    axios.get("./homeCatagoryData.json").then((res) => setCardDatas(res.data));
+  }, []);
   return (
     <>
       <Nav />
@@ -78,12 +84,14 @@ const Home = () => {
       </div>
       <div className="catagory_container">
         <div className="catagory_containt">
-          <div class="card text-center">
-            <div class="card-body">
-            <img src="" class="card-img-top" alt=""/>
+          {cardDatas.map((item) => (
+            <div key={item.id} class="card text-center">
+              <div class="card-body">
+                <img src="" class="card-img-top" alt="" />
+              </div>
+              <div class="card-footer">{item.title}</div>
             </div>
-            <div class="card-footer text-muted">2 days ago</div>
-          </div>
+          ))}
         </div>
       </div>
     </>
