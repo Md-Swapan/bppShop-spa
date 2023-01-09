@@ -1,0 +1,82 @@
+[
+    {
+        "id":1,
+        "title":"Islamic",
+        "img":""
+    },
+    {
+        "id":2,
+        "title":"Grocery (only in Dhaka city)",
+        "img":""
+    },
+    {
+        "id":3,
+        "title":"Fashion",
+        "img":""
+    },
+    {
+        "id":4,
+        "title":"Baby Care",
+        "img":""
+    },
+    {
+        "id":5,
+        "title":"Electronics",
+        "img":""
+    },
+    {
+        "id":6,
+        "title":"Furniture",
+        "img":""
+    },
+    {
+        "id":7,
+        "title":"Shoe",
+        "img":""
+    },
+    {
+        "id":8,
+        "title":"Cosmetic",
+        "img":""
+    },
+    {
+        "id":9,
+        "title":"Pharmacy",
+        "img":""
+    },
+    {
+        "id":10,
+        "title":"Eye Care",
+        "img":""
+    },
+    {
+        "id":11,
+        "title":"Sports",
+        "img":""
+    },
+    {
+        "id":12,
+        "title":"Home Appliance & Decorate",
+        "img":""
+    },
+    {
+        "id":13,
+        "title":"Vehicle",
+        "img":""
+    },
+    {
+        "id":14,
+        "title":"Hardware,Cables & Sanitary",
+        "img":""
+    },
+    {
+        "id":15,
+        "title":"Used Products",
+        "img":""
+    },
+    {
+        "id":16,
+        "title":"Watch",
+        "img":""
+    }
+]
