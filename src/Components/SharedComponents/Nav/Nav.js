@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import defaultAvatar from "../../../Assets/Images/default-avatar.jpg";
-import bppShopsLogo from "../../../Assets/Images/bpp shop logo fainal.png";
+import bppShopsLogo from "../../../Assets/Images/bppshopslogo.png";
+import Sidebar from "../Sidebar/Sidebar";
 const Nav = () => {
   return (
     <>
       <div className="navbar-section">
         <nav className="nav">
-          {/* <div className="container-fluid"> */}
+          <Sidebar/>
             <div className="nav-content">
               <div className="logo">
                 <img

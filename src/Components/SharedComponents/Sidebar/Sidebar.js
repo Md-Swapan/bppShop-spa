@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar-toggle-section">
-        <input type="checkbox" name="" id="openSidebarMenu" />
+      <input type="checkbox" name="" id="openSidebarMenu" />
         <label for="openSidebarMenu" className="sidebarIconToggle">
           <div className="spinner top"></div>
           <div className="spinner middle"></div>

@@ -108,10 +108,11 @@ const Home = () => {
   // useEffect(() => {
   //   axios.get("./homeCatagoryData.json").then((res) => setCardDatas(res.data));
   // }, []);
+
+  
   return (
     <>
       <Nav />
-      <Sidebar />
       <div className="header_container">
         <div className="header_btn">
           <div>
