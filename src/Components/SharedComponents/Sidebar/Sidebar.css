@@ -1,12 +1,12 @@
 #sidebarMenu {
   height: 100%;
-  width: 350px;
+  width: 300px;
   position: fixed;
   left: 0;
   top: 0;
   margin-top: 60px;
   background: rgb(238, 238, 238);
-  transform: translateX(-350px);
+  transform: translateX(-300px);
   transition: transform 250ms ease-in-out;
 }
 
@@ -60,7 +60,11 @@
 }
 
 .homeIcon {
-  margin: auto;
+  justify-content: center !important;
+}
+
+.homeIcon:hover a {
+  margin-left: 0px !important;
 }
 .homeIcon i {
   text-align: center;
@@ -81,7 +85,7 @@
   color: rgb(65, 65, 65);
   display: block;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.3s;
 }
 .menu li:hover a {
@@ -96,7 +100,7 @@
 }
 .menu li span {
   font-size: 15px;
-  margin: 7px -10px 0px 0px !important;
+  margin: 7px -15px 0px 0px !important;
 }
 
 

@@ -16,9 +16,13 @@
 }
 
 .bpshopsLogo {
-  width: 13em;
+  width: 10em;
   cursor: pointer;
   transition: all 1s;
+  margin-left: 35px;
+  background: #fff;
+  padding: 5px 7px;
+  border-radius: 30px;
 }
 
 .bpshopsIcon {

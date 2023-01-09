@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import defaultAvatar from "../../../Assets/Images/default-avatar.jpg";
+import bppShopsLogo from "../../../Assets/Images/bpp shop logo fainal.png";
 const Nav = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Nav = () => {
               <div className="logo">
                 <img
                   className="bpshopsLogo"
-                  src="img/bppshops-logo.png"
+                  src={bppShopsLogo}
                   alt=""
                 />
 

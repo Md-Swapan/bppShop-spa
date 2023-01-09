@@ -30,12 +30,12 @@ const Sidebar = () => {
         <div id="sidebarMenu">
           <ul className="menu">
             <li className="homeIcon">
-              <a href="">
+              <a href="/">
                 <i className="bi bi-house-door-fill"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/islamic">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -48,7 +48,7 @@ const Sidebar = () => {
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <a href="/grocery">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -60,7 +60,7 @@ const Sidebar = () => {
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <a href="/fashion">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -72,7 +72,7 @@ const Sidebar = () => {
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <a href="/baby-care">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -84,7 +84,7 @@ const Sidebar = () => {
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <a href="/cosmetics">
                 <img
                   width="15"
                   className="sidebar-Icon"
