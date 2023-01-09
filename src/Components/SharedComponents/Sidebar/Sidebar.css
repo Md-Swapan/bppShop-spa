@@ -1,0 +1,84 @@
+#sidebarMenu {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  margin-top: 80px;
+  background: rgb(166, 165, 165);
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  
+}
+
+#openSidebarMenu {
+  display: none;
+}
+
+.sidebarIconToggle {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  z-index: 20;
+  top: 30px;
+  left: 67px;
+  cursor: pointer;
+}
+
+.spinner {
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s;
+}
+
+.middle,
+.bottom {
+  margin-top: 5px;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .middle {
+  opacity: 0;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .top {
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .bottom {
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
+
+#openSidebarMenu:checked ~ #sidebarMenu {
+  transform: translateX(0px);
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  color: #fff;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.15);
+}
+
+.menu li a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 9px;
+  font-size: 17px;
+  transition: all 0.3s;
+}
+
+.menu li:hover a {
+  margin-left: 5px;
+}
+
+.sidebar-Icon {
+  border-radius: 2px;
+}
