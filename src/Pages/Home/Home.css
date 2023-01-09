@@ -75,9 +75,15 @@ hr:not([size]) {
 
 .card {
     width: 300px;
+    height: 350px;
     margin: 10px;
+    border: none;
 }
-
+.card-body {
+    flex: 1 1 auto;
+    padding: 0px;
+    border: none;
+}
 .card-footer {
     background: #D7E4E8;
     color: #2C2C2C;
