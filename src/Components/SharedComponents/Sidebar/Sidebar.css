@@ -1,12 +1,12 @@
 #sidebarMenu {
   height: 100%;
-  width: 300px;
+  width: 350px;
   position: fixed;
   left: 0;
   top: 0;
   margin-top: 60px;
-  background: rgb(224, 224, 224);
-  transform: translateX(-300px);
+  background: rgb(238, 238, 238);
+  transform: translateX(-350px);
   transition: transform 250ms ease-in-out;
 }
 
@@ -20,7 +20,7 @@
   position: absolute;
   z-index: 20;
   top: 20px;
-  left: 50px;
+  left: 30px;
   cursor: pointer;
 }
 
@@ -59,23 +59,47 @@
   margin: 0;
 }
 
-.menu li {
-  border-bottom: 1px solid rgb(255, 255, 255);
+.homeIcon {
+  margin: auto;
 }
+.homeIcon i {
+  text-align: center;
+  border-radius: 50px ;
+  padding: 5px 9px ;
+  color: #fd7e14;
+  background: #fff;
+  font-size: 23px;
+}
+.menu li {
+  padding: 7px 25px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(224, 224, 224);
 
+}
 .menu li a {
   color: rgb(65, 65, 65);
   display: block;
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 9px;
-  font-size: 17px;
+  font-size: 15px;
   transition: all 0.3s;
 }
-
 .menu li:hover a {
   margin-left: 5px;
 }
+.menu li img {
+  width: 35px;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 5px;
+  background: #fff;
+}
+.menu li span {
+  font-size: 15px;
+  margin: 7px -10px 0px 0px !important;
+}
+
+
 
 .sidebar-Icon {
   border-radius: 2px;
