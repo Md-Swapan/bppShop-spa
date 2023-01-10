@@ -1,16 +1,21 @@
-.footer_container_section{
+.footer_container_section {
   background: gainsboro;
   padding: 40px 0px;
   margin-top: 60px;
 }
-.footer-content{
+
+.footer-content {
   width: 65%;
   margin: auto;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.brand_address_container .logo img{
+
+.brand_address .logo img {
+  width: 50%;
+}
+.brand_address_container .logo img {
   width: 50%;
 }
 
@@ -20,7 +25,7 @@
   justify-content: space-around;
   gap: 20px;
 }
-.downloadApp_newsletter_content button{
+.downloadApp_newsletter_content button {
   width: 150px;
   display: flex;
   align-items: center;
@@ -33,5 +38,34 @@
   background: #ffffff;
   color: #303030;
   padding: 0px 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+/* -----------Bottom Footer Style--------- */
+.bottom_footer_container_section {
+  background: #433e41;
+}
+.bottom_footer_content {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  padding: 20px 0px;
+}
+.bottom_footer_left {
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.bottom_footer_right {
+  display: flex;
+}
+.bottom_term_text {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.bottom_privacy_text {
+  cursor: pointer;
 }

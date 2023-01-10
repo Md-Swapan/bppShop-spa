@@ -65,7 +65,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bottom_footer_container_section text-center">hi</div>
+      
+      {/* </div> */}
+      <div className="bottom_footer_container_section">
+        <div className="bottom_footer_content">
+          <div className="bottom_footer_left">© All Right Reserved BPPSHOP</div>
+          <div className="bottom_footer_right">
+            <div className="bottom_term_text">Terms & conditions</div>
+            <div className="bottom_privacy_text">Privacy Policy</div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
