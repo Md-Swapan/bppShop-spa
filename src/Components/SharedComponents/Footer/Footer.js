@@ -27,6 +27,9 @@ const Footer = () => {
                 </div>
             </div>
            </div>
+           <div className='bottom_footer_container_section text-center'>
+                hi
+           </div>
         </>
     );
 };
