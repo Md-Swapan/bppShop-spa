@@ -40,64 +40,64 @@ const CategoryData = [
     img: babycare,
   },
   {
-    id: 8,
+    id: 5,
     title: "Cosmetic",
     img: cosmetic,
   },
   {
-    id: 7,
+    id: 6,
     title: "Shoe",
     img: shoe,
   },
   {
-    id: 10,
+    id: 7,
     title: "Eye Care",
     img: eyecare,
   },
   {
-    id: 11,
+    id: 8,
     title: "Sports",
     img: sports,
   },
   {
-    id: 16,
+    id: 9,
     title: "Watch",
     img: watch,
   },
   {
-    id: 5,
+    id: 10,
     title: "Electronics",
     img: electronics,
   },
   {
-    id: 6,
+    id: 11,
     title: "Furniture",
     img: furniture,
   },
 
   {
-    id: 9,
+    id: 12,
     title: "Pharmacy",
     img: pharmacy,
   },
 
   {
-    id: 12,
+    id: 13,
     title: "Home Appliance & Decorate",
     img: homeappliance,
   },
   {
-    id: 13,
+    id: 14,
     title: "Vehicle",
     img: vehicle,
   },
   {
-    id: 14,
+    id: 15,
     title: "Hardware, Cables & Sanitary",
     img: hardware,
   },
   {
-    id: 15,
+    id: 16,
     title: "Used Products",
     img: usedproducts,
   },
