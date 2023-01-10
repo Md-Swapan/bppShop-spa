@@ -101,31 +101,29 @@
 }
 
 .get_in_touch_container {
-  width: 65%;
-  margin: auto;
+  /* width: 65%;
+  margin: auto; */
   color: #414141;
   font-family: "DM Sans", sans-serif;
 }
 .get_in_touch_container h5{
   color: #ef8341;
-  text-align: center;
+  /* text-align: center; */
   font-family: "Kanit", sans-serif;
-  margin-bottom: 40px;
 }
 
 .contact_content{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 20px;
+  /* justify-content: space-around; */
+  /* text-align: center; */
 }
 .contact_content i{
-  font-size: 22px;
+  font-size: 17px;
   color: #ef8341;
   background: #ffffff;
-  padding: 6px 10px;
+  padding: 6px 9px;
   border-radius: 50px;
 }
 .social_content{

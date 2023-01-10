@@ -21,6 +21,22 @@ const Footer = () => {
                 Dhaka 1217
               </p>
             </div>
+
+						<div className="get_in_touch_container">
+          
+							<h5>Start a Conversation--</h5>
+							<div className="contact_content">
+								<p>
+									<i class="bi bi-telephone-fill"></i> 01911655303
+								</p>
+								<p>
+									<i class="bi bi-envelope-fill"></i> support@bppshop.com.bd
+								</p>
+								<p>
+									<i class="bi bi-headset"></i> Support Ticket
+								</p>
+							</div>
+						</div>
           </div>
           <div className="special_container">
             <h5>SPECIAL</h5>
