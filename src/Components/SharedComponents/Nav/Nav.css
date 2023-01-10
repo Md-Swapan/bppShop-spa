@@ -69,6 +69,9 @@
 
 /* responsive css */
 @media only screen and (max-width: 1400px) {
+  .search {
+    margin-left: 17.5%;
+  }
   .sidebarIconToggle {
     left: 37px;
   }
@@ -78,15 +81,11 @@
   .login {
     margin-right: 37px;
   }
-  .search {
-    width: 600px;
-  }
 }
 
 @media only screen and (max-width: 1300px) {
   .search {
-    width: 550px;
-    margin-left: 10px;
+    margin-left: 14.2%;
   }
   .bpshopsLogo {
     margin-left: 75px;
@@ -101,8 +100,7 @@
 
 @media only screen and (max-width: 1200px) {
   .search {
-    width: 500px;
-    margin-left: 10px;
+    margin-left: 10%;
   }
   .bpshopsLogo {
     margin-left: 75px;
@@ -118,7 +116,7 @@
 @media only screen and (max-width: 1100px) {
   .search {
     width: 450px;
-    margin-left: 0px;
+    margin-left: 8%;
   }
   .bpshopsLogo {
     margin-left: 75px;
@@ -133,8 +131,9 @@
 
 @media only screen and (max-width: 1000px) {
   .search {
-    width: 410px;
-    margin-left: 0px;
+    width: 380px;
+    margin-left: 6.5%;
+    transition: all 1s;
   }
   .bpshopsLogo {
     margin-left: 75px;
@@ -149,8 +148,9 @@
 
 @media only screen and (max-width: 900px) {
   .search {
-    width: 410px;
-    margin-left: 20px;
+    width: 380px;
+    margin-left: 16.3%;
+    transition: all 1s;
   }
   .bpshopsLogo {
     display: none;
@@ -170,8 +170,8 @@
 
 @media only screen and (max-width: 892px) {
   .search {
-    width: 390px;
-    margin-left: 17px;
+    margin-left: 15.5%;
+    transition: all 1s;
   }
 
   .bpshopsLogo {
@@ -192,9 +192,9 @@
 
 @media only screen and (max-width: 800px) {
   .search {
-    width: 370px;
-    margin-left: 15px;
+    margin-left: 10.1%;
   }
+
   .bpshopsLogo {
     display: none;
   }
@@ -213,8 +213,7 @@
 
 @media only screen and (max-width: 768px) {
   .search {
-    width: 350px;
-    margin-left: 10px;
+    margin-left: 8%;
   }
   .sidebarIconToggle {
     top: 32px;
@@ -244,9 +243,7 @@
 @media only screen and (max-width: 668px) {
   .search {
     width: 300px;
-    padding: 14px 20px;
-    margin-left: -10px;
-    font-size: 16px;
+    margin-left: 7.5%;
   }
   .sidebarIconToggle {
     top: 32px;
@@ -277,9 +274,87 @@
 @media only screen and (max-width: 576px) {
   .search {
     width: 250px;
-    padding: 14px 20px;
-    margin-left: 0px;
-    font-size: 15px;
+    margin-left: 6%;
+    font-size: 14px;
+  }
+  .searchIcon {
+    margin-top: 8px;
+  }
+
+  .sidebarIconToggle {
+    top: 32px;
+    left: 30px;
+  }
+
+  .bpshopsLogo {
+    display: none;
+  }
+
+  .bpshopsIcon {
+    display: block;
+    width: 45px;
+    margin-left: 65px;
+  }
+
+  .login h6 {
+    display: none;
+  }
+
+  .threeDotMenuIcon {
+    display: block;
+  }
+  .login {
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .search {
+    width: 220px;
+    margin-left: -7%;
+    font-size: 12px;
+  }
+  .searchIcon {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .sidebarIconToggle {
+    top: 32px;
+    left: 30px;
+  }
+
+  .bpshopsLogo {
+    display: none;
+  }
+
+  .bpshopsIcon {
+    display: block;
+    width: 45px;
+    margin-left: 65px;
+  }
+
+  .login h6 {
+    display: none;
+  }
+
+  .threeDotMenuIcon {
+    display: block;
+  }
+  .login {
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .search {
+    width: 180px;
+    margin-left: -28%;
+    font-size: 10.5px;
+    padding: 8px 10px;
+  }
+  .searchIcon {
+    margin-top: 10px;
+    font-size: 10px;
+    padding-left: 10px;
   }
 
   .sidebarIconToggle {

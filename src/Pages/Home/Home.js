@@ -1,6 +1,5 @@
 import React from "react";
 import Nav from "../../Components/SharedComponents/Nav/Nav";
-import Sidebar from "../../Components/SharedComponents/Sidebar/Sidebar";
 import "./Home.css";
 import islamic from "../../Assets/Images/categoryImg/islamic.png";
 import grocery from "../../Assets/Images/categoryImg/grocery.png";
@@ -103,13 +102,6 @@ const datas =[
 ]
 
 const Home = () => {
-  // const [cardDatas, setCardDatas] = useState([]);
-  // // console.log(cardDatas);
-  // useEffect(() => {
-  //   axios.get("./homeCatagoryData.json").then((res) => setCardDatas(res.data));
-  // }, []);
-
-  
   return (
     <>
       <Nav />
