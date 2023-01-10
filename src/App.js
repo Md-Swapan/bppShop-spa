@@ -29,18 +29,18 @@ function App() {
         <Route path="grocery" element={<Grocery />} />
         <Route path="fashion" element={<Fashion />} />
         <Route path="baby-care" element={<BabyCare />} />
-        <Route path="shoes" element={<Shoes />} />
         <Route path="cosmetics" element={<Cosmetics />} />
-        <Route path="electronics" element={<Electronics />} />
-        <Route path="furniture" element={<Furniture />} />
-        <Route path="pharmacy" element={<Pharmacy />} />
+        <Route path="shoes" element={<Shoes />} />
         <Route path="eye-care" element={<EyeCare />} />
         <Route path="sports" element={<Sports />} />
         <Route path="watch" element={<Watch />} />
-        <Route path="vehicle" element={<Vehicle />} />
-        <Route path="used-product" element={<UsedProducts />} />
+        <Route path="electronics" element={<Electronics />} />
+        <Route path="furniture" element={<Furniture />} />
+        <Route path="pharmacy" element={<Pharmacy />} />
         <Route path="home-appliance-decorate" element={<HomeApplianceDecorate />} />
+        <Route path="vehicle" element={<Vehicle />} />
         <Route path="hardware-cables-sanitary" element={<HardwareCablesSanitary />} />
+        <Route path="used-product" element={<UsedProducts />} />
         {/* <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Route path="/" element={<Navigate replace to="/login" />} /> */}
