@@ -10,6 +10,28 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.brand_address .logo img{
+.brand_address_container .logo img{
   width: 50%;
+}
+
+.downloadApp_newsletter_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.downloadApp_newsletter_content button{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  background: #ffffff;
+  color: #303030;
+  padding: 0px 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
