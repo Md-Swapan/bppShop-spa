@@ -1,4 +1,5 @@
 import React from "react";
+import './Islamic.css'
 
 const Islamic = () => {
   return (

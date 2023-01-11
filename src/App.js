@@ -26,8 +26,8 @@ import HomeFilterBtnHeader from "./Components/HomeFilterBtnHeader/HomeFilterBtnH
 function App() {
   return (
     <div className="App">
-    <Nav/>
-    <HomeFilterBtnHeader/>
+      <Nav/>
+      <HomeFilterBtnHeader/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="islamic" element={<Islamic />} />
