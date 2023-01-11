@@ -57,13 +57,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Grocery (only in Dhaka city)
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="/fashion">
@@ -74,13 +69,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Fashion
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="/baby-care">
@@ -91,13 +81,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Baby Care
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="/cosmetics">
@@ -108,17 +93,9 @@ const Sidebar = () => {
                   alt=""
                 />
                 Cosmetics
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>    
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
-            </li>
-            
-            
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             <li>
               <Link to="shoes">
                 <img
@@ -128,31 +105,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Shoes
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
               <Link to="eye-care">
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
-            </li>
-            <li>
-              <a href="">
-                <img
-                  width="15"
-                  className="sidebar-Icon"
-                  src={watchIcon}
-                  alt=""
-                />
-                Watch
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
-            </li>
-            <li>
-              <a href="">
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -160,13 +117,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Eye Care
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="sports">
@@ -177,13 +129,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Sports
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="watch">
@@ -193,15 +140,9 @@ const Sidebar = () => {
                   src={watchIcon}
                   alt=""
                 />
-<<<<<<< HEAD
                 Watch
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-                Pharmacy
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="electronics">
@@ -212,13 +153,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Electronics
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="furniture">
@@ -229,13 +165,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Furniture
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="pharmacy">
@@ -245,15 +176,9 @@ const Sidebar = () => {
                   src={pharmacyIcon}
                   alt=""
                 />
-<<<<<<< HEAD
                 Pharmacy
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-                Hardware, Cables & Sanitary
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="home-appliance-decorate">
@@ -264,13 +189,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Home Appliance & Decorate
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="vehicle">
@@ -281,7 +201,6 @@ const Sidebar = () => {
                   alt=""
                 />
                 Vehicle
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
@@ -296,10 +215,6 @@ const Sidebar = () => {
                 Hardware, Cables & Sanitary
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
             <li>
               <Link to="used-product">
@@ -310,13 +225,8 @@ const Sidebar = () => {
                   alt=""
                 />
                 Used Products
-<<<<<<< HEAD
               </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-=======
-              </a>
-              <span><i className="bi bi-chevron-right"></i></span>
->>>>>>> 8de99c9123d8c606c0bb1b84bfa5544b534b5c13
             </li>
           </ul>
         </div>
