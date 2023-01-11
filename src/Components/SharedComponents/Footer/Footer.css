@@ -55,6 +55,7 @@
   border-radius: 5px;
   outline: none;
   font-size: 14px;
+  font-family: "Space Grotesk", sans-serif;
   background: #494949;
   color: #ffffff;
   padding: 2px 10px;
@@ -101,8 +102,7 @@
 }
 
 .get_in_touch_container {
-  /* width: 65%;
-  margin: auto; */
+  margin-top: 20px;
   color: #414141;
   font-family: "DM Sans", sans-serif;
 }

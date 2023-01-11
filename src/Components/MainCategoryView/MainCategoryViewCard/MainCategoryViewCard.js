@@ -61,10 +61,10 @@ const MainCategoryViewCard = (props) => {
     <>
       <div onClick={() => handleSubCategoryView(id)} className="category_card_content">
         <div className="card">
-        <div class="card-body">
-          <img src={img} class="card-img-top" alt="" />
+        <div className="card-body">
+          <img src={img} className="card-img-top" alt="" />
         </div>
-        <div class="card-footer">{title}</div>
+        <div className="card-footer">{title}</div>
         </div>
       </div>
     </>
