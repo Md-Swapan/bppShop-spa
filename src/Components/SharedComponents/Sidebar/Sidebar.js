@@ -16,6 +16,7 @@ import hardwareIcon from '../../../Assets/Images/icons/image 52 (1).png'
 import homeDecorateIcon from '../../../Assets/Images/icons/image 50.png'
 import vehicleIcon from '../../../Assets/Images/icons/image 53.png'
 import usedProductsIcon from '../../../Assets/Images/icons/usedProduct.jfif'
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -30,12 +31,12 @@ const Sidebar = () => {
         <div id="sidebarMenu">
           <ul className="menu">
             <li className="homeIcon">
-              <a href="/">
+              <Link to ="/">
                 <i className="bi bi-house-door-fill"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/islamic">
+              <Link to="/islamic">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -43,12 +44,12 @@ const Sidebar = () => {
                   alt=""
                 />
                  Islamic
-              </a>
+              </Link>
 
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="/grocery">
+              <Link to="/grocery">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -56,11 +57,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Grocery (only in Dhaka city)
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="/fashion">
+              <Link to="/fashion">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -68,11 +69,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Fashion
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="/baby-care">
+              <Link to="/baby-care">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -80,11 +81,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Baby Care
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="/cosmetics">
+              <Link to="/cosmetics">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -92,13 +93,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Cosmetics
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
-            </li>
-            
-            
+            </li>    
             <li>
-              <a href="">
+              <Link to="shoes">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -106,23 +105,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Shoes
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
-                <img
-                  width="15"
-                  className="sidebar-Icon"
-                  src={watchIcon}
-                  alt=""
-                />
-                Watch
-              </a>
-              <span><i class="bi bi-chevron-right"></i></span>
-            </li>
-            <li>
-              <a href="">
+              <Link to="eye-care">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -130,11 +117,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Eye Care
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="sports">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -142,24 +129,23 @@ const Sidebar = () => {
                   alt=""
                 />
                 Sports
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
-            
             <li>
-              <a href="">
+              <Link to="watch">
                 <img
                   width="15"
                   className="sidebar-Icon"
-                  src={pharmacyIcon}
+                  src={watchIcon}
                   alt=""
                 />
-                Pharmacy
-              </a>
+                Watch
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="electronics">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -167,11 +153,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Electronics
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="furniture">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -179,23 +165,23 @@ const Sidebar = () => {
                   alt=""
                 />
                 Furniture
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="pharmacy">
                 <img
                   width="15"
                   className="sidebar-Icon"
-                  src={hardwareIcon}
+                  src={pharmacyIcon}
                   alt=""
                 />
-                Hardware, Cables & Sanitary
-              </a>
+                Pharmacy
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="home-appliance-decorate">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -203,11 +189,11 @@ const Sidebar = () => {
                   alt=""
                 />
                 Home Appliance & Decorate
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="vehicle">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -215,11 +201,23 @@ const Sidebar = () => {
                   alt=""
                 />
                 Vehicle
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
             <li>
-              <a href="">
+              <Link to="hardware-cables-sanitary">
+                <img
+                  width="15"
+                  className="sidebar-Icon"
+                  src={hardwareIcon}
+                  alt=""
+                />
+                Hardware, Cables & Sanitary
+              </Link>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </li>
+            <li>
+              <Link to="used-product">
                 <img
                   width="15"
                   className="sidebar-Icon"
@@ -227,7 +225,7 @@ const Sidebar = () => {
                   alt=""
                 />
                 Used Products
-              </a>
+              </Link>
               <span><i class="bi bi-chevron-right"></i></span>
             </li>
           </ul>

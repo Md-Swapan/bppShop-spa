@@ -12,6 +12,8 @@
 }
 
 .card {
+  height: 350px;
+  width: 290px;
   border: none;
   border-radius: 7px;
   cursor: pointer;
@@ -37,3 +39,53 @@
   padding: 15px;
   border-top: 1px solid gainsboro;
 }
+
+/* -----Mobile Responsive Design----- */
+@media only screen and (max-width: 1400px) {
+  .category_content {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+@media only screen and (max-width: 1300px) {
+  .category_content {
+  grid-template-columns: repeat(3, 1fr);
+}
+}
+@media only screen and (max-width: 1200px) {
+  .category_content{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .category_content{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 992px) {
+  .category_content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 892px) {
+  .category_content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .category_content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .category_content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .category_content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+

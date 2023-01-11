@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const Islamic = () => {
   return (
-    <div>
-      <h1>Islamic Page</h1>
-    </div>
+    <>
+      <div className="text-center">
+        Islamic Page
+      </div>
+    </>
   );
 };
 

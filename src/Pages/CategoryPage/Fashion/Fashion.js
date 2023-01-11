@@ -2,9 +2,9 @@ import React from 'react';
 
 const Fashion = () => {
   return (
-    <div>
-      <h1>Fashion Page</h1>
-    </div>
+    <>
+      <div className="text-center">Fashion Page</div>
+    </>
   );
 };
 

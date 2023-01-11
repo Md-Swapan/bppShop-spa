@@ -133,7 +133,6 @@
   .search {
     width: 380px;
     margin-left: 6.5%;
-    transition: all 1s;
   }
   .bpshopsLogo {
     margin-left: 75px;
@@ -150,7 +149,6 @@
   .search {
     width: 380px;
     margin-left: 16.3%;
-    transition: all 1s;
   }
   .bpshopsLogo {
     display: none;
@@ -171,7 +169,6 @@
 @media only screen and (max-width: 892px) {
   .search {
     margin-left: 15.5%;
-    transition: all 1s;
   }
 
   .bpshopsLogo {

@@ -2,9 +2,9 @@ import React from 'react';
 
 const UsedProducts = () => {
   return (
-    <div>
-      <h1>Used Products Page</h1>
-    </div>
+    <>
+      <div className="text-center">Used Products Page</div>
+    </>
   );
 };
 

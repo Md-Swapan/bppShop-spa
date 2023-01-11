@@ -19,10 +19,15 @@ import UsedProducts from './Pages/CategoryPage/UsedProducts/UsedProducts';
 import HomeApplianceDecorate from './Pages/CategoryPage/HomeApplianceDecorate/HomeApplianceDecorate';
 import HardwareCablesSanitary from './Pages/CategoryPage/HardwareCablesSanitary/HardwareCablesSanitary';
 import PageNotFound from './Pages/PageNotFound/PageNotFound';
+import Nav from "./Components/SharedComponents/Nav/Nav";
+import Footer from "./Components/SharedComponents/Footer/Footer";
+import HomeFilterBtnHeader from "./Components/HomeFilterBtnHeader/HomeFilterBtnHeader";
 
 function App() {
   return (
     <div className="App">
+    <Nav/>
+    <HomeFilterBtnHeader/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="islamic" element={<Islamic />} />
@@ -46,6 +51,7 @@ function App() {
           <Route path="/" element={<Navigate replace to="/login" />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

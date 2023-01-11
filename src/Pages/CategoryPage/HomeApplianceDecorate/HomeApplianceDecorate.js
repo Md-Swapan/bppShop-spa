@@ -2,9 +2,9 @@ import React from 'react';
 
 const HomeApplianceDecorate = () => {
   return (
-    <div>
-      <h1>Home Appliance And Decorate Page</h1>
-    </div>
+    <>
+      <div className="text-center">Home Appliance And Decorate Page</div>
+    </>
   );
 };
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Pharmacy = () => {
   return (
-    <div>
-      <h1>Pharmacy Page</h1>
-    </div>
+    <>
+      <div className="text-center">Pharmacy Page</div>
+    </>
   );
 };
 

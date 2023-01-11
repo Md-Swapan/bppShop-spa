@@ -12,11 +12,11 @@ const Nav = () => {
           <Sidebar/>
             <div className="nav-content">
               <div className="logo">
-                <img
+                <Link to='/'><img
                   className="bpshopsLogo"
                   src={bppShopsLogo}
                   alt=""
-                />
+                /></Link>
 
                 <img className="bpshopsIcon" src="img/bpp_icon.png" alt="" />
               </div>

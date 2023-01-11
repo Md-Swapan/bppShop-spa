@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Grocery = () => {
   return (
-    <div>
-      <h1>Grocery Page</h1>
-    </div>
+    <>
+      <div className="text-center">Grocery Page</div>
+    </>
   );
 };
 
