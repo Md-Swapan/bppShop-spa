@@ -21,6 +21,22 @@ const Footer = () => {
                 Dhaka 1217
               </p>
             </div>
+
+						<div className="get_in_touch_container">
+          
+							<h5>Start a Conversation__</h5>
+							<div className="contact_content">
+								<p>
+									<i className="bi bi-telephone-fill"></i> 01911655303
+								</p>
+								<p>
+									<i className="bi bi-envelope-fill"></i> support@bppshop.com.bd
+								</p>
+								<p>
+									<i className="bi bi-headset"></i> Support Ticket
+								</p>
+							</div>
+						</div>
           </div>
           <div className="special_container">
             <h5>SPECIAL</h5>
@@ -73,9 +89,9 @@ const Footer = () => {
               </div>
 
               <div className="social_content">
-                <i class="bi bi-facebook"></i>
-                <i class="bi bi-instagram"></i>
-                <i class="bi bi-twitter"></i>
+                <i className="bi bi-facebook"></i>
+                <i className="bi bi-instagram"></i>
+                <i className="bi bi-twitter"></i>
               </div>
             </div>
           </div>

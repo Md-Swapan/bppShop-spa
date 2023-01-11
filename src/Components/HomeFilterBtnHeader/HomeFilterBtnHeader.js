@@ -14,72 +14,72 @@ const HomeFilterBtnHeader = () => {
             <button>Discounted Products</button>
           </div>
           
-          <div class="dropdown">
+          <div className="dropdown">
             <button
-              class="dropdown-toggle"
+              className="dropdown-toggle"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <span className="">Hot Items</span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   New Arrival
                 </a>
               </li>
               <li>
-                <hr class="dropdown-divider" />
+                <hr className="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Top Rated
                 </a>
               </li>
               <li>
-                <hr class="dropdown-divider" />
+                <hr className="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Best Selling
                 </a>
               </li>
             </ul>
           </div>
-          <div class="dropdown">
+          <div className="dropdown">
             <button
-              class="dropdown-toggle"
+              className="dropdown-toggle"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <span className="">Partner Zone</span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Become a seller
                 </a>
               </li>
               <li>
-                <hr class="dropdown-divider" />
+                <hr className="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Seller Login
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Become a Agent
                 </a>
               </li>
               <li>
-                <hr class="dropdown-divider" />
+                <hr className="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   Agent Login
                 </a>
               </li>
