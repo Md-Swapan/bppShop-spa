@@ -8,7 +8,10 @@ const PageNotFound = () => {
     <>
      <div className="pageNotFoundContainer">
       <div className="">
-        <img src={PageNotFoundGif} alt="Page Not Found."/>
+        {/* <img src={PageNotFoundGif} alt="Page Not Found."/> */}
+        <h2>Sorry!</h2>
+        <h4>Content Not Found.</h4>
+
         <br/>
 
         <a href="/">
