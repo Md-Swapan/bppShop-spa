@@ -10,7 +10,7 @@ const ProductCard = (props) => {
           <div className=" product-card-body">
             <img src={image} className="card-img-top" alt="" />
             <div className="product-card-body-content">
-              <small>{title.toString().substring(0, 20)}....</small>
+              <small>{title.toString().substring(0, 18)}...</small>
               <br />
               <strong>৳ {price}</strong>
             </div>
