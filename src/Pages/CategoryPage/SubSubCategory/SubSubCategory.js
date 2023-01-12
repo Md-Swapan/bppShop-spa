@@ -53,7 +53,9 @@ const SubCategoryData = [
 
 const SubSubCategory = () => {
   const {id, subId} = useParams();
-
+  // const location = useLocation();
+  // const currentPath = location.pathname;
+  // const navigate = useNavigate();
 
   const [subSubCategories, setSubSubCategories] = useState(SubCategoryData);
 
@@ -65,10 +67,12 @@ const SubSubCategory = () => {
             <li class="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>
+
             <li class="breadcrumb-item active" aria-current="page">
-              {id}
+              {id? <Link to="/:id" >{id}</Link> : <Link to="" >{id}</Link>}
             </li>
             <li class="breadcrumb-item active" aria-current="page">
+              
               {subId}
             </li>
           </ol>
