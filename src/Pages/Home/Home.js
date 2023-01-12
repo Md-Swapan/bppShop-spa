@@ -1,12 +1,12 @@
 import React from "react";
-import MainCategoryView from "../../Components/MainCategoryView/MainCategoryView";
 import "./Home.css";
+import Category from './../CategoryPage/Category/Category';
 
 const Home = () => {
   return (
     <>
       <div className="home_container">
-        <MainCategoryView />
+        <Category />
       </div>
     </>
   );
