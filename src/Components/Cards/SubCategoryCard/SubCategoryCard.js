@@ -1,19 +1,22 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SubCategoryCard = (props) => {
   const { id, title, img, path } = props.subcategory;
 
-  const handleSubCategoryView = (id) =>{
-    if(id){
-      Navigate(`/${path}`)
-    }
-  }
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const navigate = useNavigate();
 
+  const handleSubSubCategoryView = (id) => {
+    if (id) {
+      navigate(currentPath + `/${path}`);
+    }
+  };
 
   return (
     <div
-      onClick={() => handleSubCategoryView(id)}
+      onClick={() => handleSubSubCategoryView(id)}
       className="category_card_content"
     >
       <div className="card">
