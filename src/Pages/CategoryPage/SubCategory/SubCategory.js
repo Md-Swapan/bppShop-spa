@@ -56,7 +56,7 @@ const SubCategory = () => {
     <>
       <div className="categoryView-section">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
+          <ol class="breadcrumb my-4">
             <li class="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>
