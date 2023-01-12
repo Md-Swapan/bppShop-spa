@@ -2,12 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ProductCard from "../../Components/Cards/ProductCard/ProductCard";
 import "./Product.css";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 
 const Product = () => {
   const { id, subId, productId } = useParams();
  
   const [products, setProducts] = useState([]);
+
+  const location =useLocation();
+  console.log(location);
 
   useEffect(() => {
     axios
