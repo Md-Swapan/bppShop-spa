@@ -27,6 +27,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
+      <Nav></Nav>
       <HomeFilterBtnHeader/>
       <Routes>
         <Route path="/" element={<Home />} />
