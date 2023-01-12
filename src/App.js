@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import Layout from "./Pages/Layout/Layout";
 import SubCategory from "./Pages/CategoryPage/SubCategory/SubCategory";
-import SubSubCategory from './Pages/CategoryPage/SubSubCategory/SubSubCategory';
+import SubSubCategory from "./Pages/CategoryPage/SubSubCategory/SubSubCategory";
+import Product from './Pages/ProductPage/Product';
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<SubCategory />} />
-          
-          <Route path="/:id" element={<SubSubCategory />} />
+          <Route path="/:id" element={<SubCategory />}/>
+          <Route path="/:id/:subId" element={<SubSubCategory />} />
+          <Route path="/:id/:subId/:productId" element={<Product />} />
+
           <Route path="*" element={<PageNotFound />} />
 
           {/* <Route path="/login" element={<Login />}></Route>

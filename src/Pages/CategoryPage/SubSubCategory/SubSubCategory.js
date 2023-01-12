@@ -2,12 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import jaynamaz from "../../../Assets/Images/subCategoryImg/image 59.png";
-import tupi from "../../../Assets/Images/subCategoryImg/image 60.png";
-import pagri from "../../../Assets/Images/subCategoryImg/image 61.png";
-import tasbih from "../../../Assets/Images/subCategoryImg/image 62.png";
-import meswak from "../../../Assets/Images/subCategoryImg/image 63.png";
-import prayerStand from "../../../Assets/Images/subCategoryImg/image 64.png";
+import jaynamaz from "../../../Assets/Images/subSubCategoryImg/image 68.png";
+import tupi from "../../../Assets/Images/subSubCategoryImg/image 69.png";
+import pagri from "../../../Assets/Images/subSubCategoryImg/image 68-1.png";
+import tasbih from "../../../Assets/Images/subSubCategoryImg/image 71.png";
+import meswak from "../../../Assets/Images/subSubCategoryImg/image 72.png";
+import prayerStand from "../../../Assets/Images/subSubCategoryImg/download (18).png";
 import SubSubCategoryCard from './../../../Components/Cards/SubSubCategoryCard/SubSubCategoryCard';
 
 
@@ -52,9 +52,10 @@ const SubCategoryData = [
 
 
 const SubSubCategory = () => {
-  const { id } = useParams();
+  const {id, subId} = useParams();
 
-  const [subCategories, setSubCategories] = useState(SubCategoryData);
+
+  const [subSubCategories, setSubSubCategories] = useState(SubCategoryData);
 
   return (
     <>
@@ -67,15 +68,18 @@ const SubSubCategory = () => {
             <li class="breadcrumb-item active" aria-current="page">
               {id}
             </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              {subId}
+            </li>
           </ol>
         </nav>
 
         <div className="categoryView-container">
           <div className="category_content">
-            {subCategories.map((subcategory) => (
+            {subSubCategories.map((SubSubcategory) => (
               <SubSubCategoryCard
-                key={subcategory.id}
-                subcategory={subcategory}
+                key={SubSubcategory.id}
+                SubSubcategory={SubSubcategory}
               />
             ))}
           </div>
