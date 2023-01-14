@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Category.css";
 import islamic from "../../../Assets/Images/categoryImg/download (10).png";
 import grocery from "../../../Assets/Images/categoryImg/download (7).png";
@@ -17,6 +17,7 @@ import hardware from "../../../Assets/Images/categoryImg/download (17).png";
 import usedProducts from "../../../Assets/Images/categoryImg/download (16).png";
 import watch from "../../../Assets/Images/categoryImg/download.png";
 import CategoryCard from './../../../Components/Cards/CategoryCard/CategoryCard';
+import axios from 'axios';
 
 const CategoryData = [
   {
@@ -121,6 +122,15 @@ const CategoryData = [
 
 const Category = () => {
   const [allCategory, setAllCategory] = useState(CategoryData);
+
+
+  // useEffect(() => {
+  //   axios.get(`http://192.168.0.239:8000/api/v1/categories`)
+  //   .then(res => {
+  //     setAllCategory(res.data.categories)
+  //     // setAllCategory(res.data)
+  //   })
+  // }, [])
 
   return (
     <>

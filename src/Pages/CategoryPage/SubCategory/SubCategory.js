@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, useLocation, useParams } from "react-router-dom";
 import salahAccessories from "../../../Assets/Images/subCategoryImg/image 59.png";
 import modestDress from "../../../Assets/Images/subCategoryImg/image 60.png";
 import attarHalal from "../../../Assets/Images/subCategoryImg/image 61.png";
@@ -8,6 +8,7 @@ import islamicBooks from "../../../Assets/Images/subCategoryImg/image 63.png";
 import otherItems from "../../../Assets/Images/subCategoryImg/image 64.png";
 import { useState } from "react";
 import SubCategoryCard from './../../../Components/Cards/SubCategoryCard/SubCategoryCard';
+import axios from 'axios';
 
 const SubCategoryData = [
   {
@@ -50,17 +51,21 @@ const SubCategoryData = [
 
 const SubCategory = () => {
   const { id } = useParams();
+  // const location = useLocation();
+  // const crumbs = location.pathname.split("/")
 
   const [subCategories, setSubCategories] = useState(SubCategoryData);
+
+ 
   return (
     <>
       <div className="categoryView-section">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb my-4">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb my-4">
+            <li className="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
+            <li className="breadcrumb-item active" aria-current="page">
               {id}
             </li>
           </ol>

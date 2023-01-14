@@ -1,8 +1,36 @@
 import React from "react";
 import "./ProductCard.css";
+import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
+import Modal from "react-modal";
+import QuickViewModal from "../../QuickViewModal/QuickViewModal";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
+
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    borderRadius: "10px",
+    paddingBottom: "20px"
+  },
+};
 
 const ProductCard = (props) => {
   const { id, title, image, price } = props.product;
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <>
       <div className="product_card_content">
@@ -12,24 +40,41 @@ const ProductCard = (props) => {
             <div className="product-card-body-content">
               <small>{title.toString().substring(0, 18)}...</small>
               <br />
-              <strong>৳ {price}</strong>
+              Each
+              <br />
+              <strong> ৳ {price}</strong>
             </div>
             <div className="quickView_AddToCart_overlay">
               <div className="overlayAddToCartBtn">
-                <h5>Add <br/> To <br/> Cart</h5>
-                <i class="bi bi-cart-plus-fill"></i>
+                {/* <h5>Add <br/> To <br/> Cart</h5>
+                <i class="bi bi-cart-plus-fill"></i> */}
+                <img src={addToCartImg} alt="" />
               </div>
-              <button><i class="bi bi-eye-fill"></i> <span>Quick View</span></button>
+              <button onClick={openModal}>
+                <i className="bi bi-eye-fill"></i> <span>Quick View</span>
+              </button>
             </div>
           </div>
 
           <div className="card-footer product-card-footer">
             <button type="">
-              <i class="bi bi-cart-plus"></i> Add To Cart
+              <i className="bi bi-cart-plus"></i> Add To Cart
             </button>
           </div>
         </div>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <span onClick={closeModal} className="modalCloseBtn"><i class="bi bi-x-lg"></i></span>
+        <br/>
+        <QuickViewModal />
+        <br/>
+      </Modal>
     </>
   );
 };

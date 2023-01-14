@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import jaynamaz from "../../../Assets/Images/subSubCategoryImg/image 68.png";
 import tupi from "../../../Assets/Images/subSubCategoryImg/image 69.png";
@@ -53,9 +53,13 @@ const SubCategoryData = [
 
 const SubSubCategory = () => {
   const {id, subId} = useParams();
-  // const location = useLocation();
-  // const currentPath = location.pathname;
-  // const navigate = useNavigate();
+  const location = useLocation();
+
+  const crumbs = location.pathname.split("/")
+  // .filter(crumb => crumb !== '')
+  // .map(crumb => {
+  //   currentLink = crumb
+  // })
 
   const [subSubCategories, setSubSubCategories] = useState(SubCategoryData);
 
@@ -63,16 +67,15 @@ const SubSubCategory = () => {
     <>
      <div className="categoryView-section">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb my-4">
-            <li class="breadcrumb-item">
+          <ol className="breadcrumb my-4">
+            <li className="breadcrumb-item">
               <Link to="/">Home</Link>
             </li>
 
-            <li class="breadcrumb-item active" aria-current="page">
-              {id? <Link to="/:id" >{id}</Link> : <Link to="" >{id}</Link>}
+            <li className="breadcrumb-item active" aria-current="page">
+              <Link to="/:id" >{id}</Link>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              
+            <li className="breadcrumb-item active" aria-current="page">
               {subId}
             </li>
           </ol>

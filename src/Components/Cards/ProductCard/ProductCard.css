@@ -4,14 +4,17 @@
   border-radius: 7px;
   cursor: pointer;
   font-family: "Space Grotesk", sans-serif;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   overflow: hidden;
   transition: all 0.3s;
 }
 .product-card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .product-card-body {
@@ -30,7 +33,7 @@
 }
 .quickView_AddToCart_overlay {
   position: absolute;
-  background: #0000008c;
+  background: #000000be;
   height: 100%;
   width: 100%;
   top: 0;
@@ -46,6 +49,9 @@
   text-align: center;
   margin-top: 46px;
 }
+.overlayAddToCartBtn img {
+  height: 133px;
+}
 .overlayAddToCartBtn i {
   font-size: 35px;
 }
@@ -59,8 +65,8 @@
   text-align: center;
   background: gainsboro;
   color: #666666;
-  border-bottom: 1px solid #ef8341;
-  margin-top: 42px;
+  border-bottom: 1px solid #b9b9b9;
+  margin-top: 66px;
   font-family: "DM Sans", sans-serif;
 }
 .quickView_AddToCart_overlay button:hover {
@@ -90,4 +96,18 @@
 }
 .product-card-footer button i {
   font-size: 17px;
+}
+.ReactModal__Overlay--after-open{
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(58, 58, 58, 0.664) !important;
+}
+
+.modalCloseBtn{
+  cursor: pointer;
+  color: #474747;
+  font-weight: 900;
+  font-size: 20px;
+  display: flex;
+  justify-content:end;
 }
