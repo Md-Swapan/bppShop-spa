@@ -124,13 +124,13 @@ const Category = () => {
   const [allCategory, setAllCategory] = useState(CategoryData);
 
 
-  // useEffect(() => {
-  //   axios.get(`http://192.168.0.239:8000/api/v1/categories`)
-  //   .then(res => {
-  //     setAllCategory(res.data.categories)
-  //     // setAllCategory(res.data)
-  //   })
-  // }, [])
+  useEffect(() => {
+    axios.get(`https://bppshop.com.bd/api/v1/categories`)
+    .then(res => {
+      console.log(res.data.data)
+      // setAllCategory(res.data)
+    })
+  }, [])
 
   return (
     <>

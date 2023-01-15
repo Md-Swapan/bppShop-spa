@@ -42,28 +42,34 @@ const Product = () => {
           </li>
         </ol>
       </nav>
-      <div className="categoryView-container productView-container">
-        {/* <div className="category_content product-content">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-            
-          ))}
-        </div> */}
-        {/* </div> */}
 
-        <SkeletonTheme baseColor="#dfdfdf" highlightColor="#f5f5f5">
-          {loading ? (
-            <>
-              <Skeleton height="100px" borderRadius="10px" count={1} />
-            </>
-          ) : (
-            <div className="category_content product-content">
-              {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          )}
-        </SkeletonTheme>
+      <div className="categoryView-container productView-container">
+        <div className="category_content product-content">
+          <SkeletonTheme baseColor="#dfdfdf" highlightColor="#f5f5f5">
+            {loading ? (
+              <>
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+                <Skeleton height="335px" borderRadius="10px" count={1} />
+              </>
+            ) : (
+              products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  loading={loading}
+                />
+              ))
+            )}
+          </SkeletonTheme>
+        </div>
       </div>
     </div>
   );
