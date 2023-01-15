@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
 import salahAccessories from "../../../Assets/Images/subCategoryImg/image 59.png";
 import modestDress from "../../../Assets/Images/subCategoryImg/image 60.png";
 import attarHalal from "../../../Assets/Images/subCategoryImg/image 61.png";
 import decorativeItems from "../../../Assets/Images/subCategoryImg/image 62.png";
 import islamicBooks from "../../../Assets/Images/subCategoryImg/image 63.png";
 import otherItems from "../../../Assets/Images/subCategoryImg/image 64.png";
-import { useState } from "react";
 import SubCategoryCard from './../../../Components/Cards/SubCategoryCard/SubCategoryCard';
-import axios from 'axios';
 
 const SubCategoryData = [
   {

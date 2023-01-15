@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import "./Category.css";
 import islamic from "../../../Assets/Images/categoryImg/download (10).png";
 import grocery from "../../../Assets/Images/categoryImg/download (7).png";
