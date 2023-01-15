@@ -8,6 +8,7 @@ const CategoryCard = (props) => {
   const navigate = useNavigate()
 
   const handleSubCategoryView = (id) =>{
+    
     if(id){
       navigate(`/${slug}`)
     }

@@ -49,13 +49,11 @@ const SubCategoryData = [
   },
 ];
 
-const SubCategory = () => {
+const SubCategory = ({allCategory}) => {
+  //console.log(allCategory);
   const {slug} = useParams();
-
-  // const location = useLocation(); 
-  // const crumbs = location.pathname.split("/")
-
-  const [subCategories, setSubCategories] = useState(SubCategoryData);
+  var subCategories = allCategory.find(item => item.slug === slug);
+  // console.log(subCategories);
 
  
   return (
@@ -74,7 +72,7 @@ const SubCategory = () => {
 
         <div className="categoryView-container">
           <div className="category_content">
-            {subCategories.map((subcategory) => (
+            {subCategories?.childes?.map((subcategory) => (
               <SubCategoryCard
                 key={subcategory.id}
                 subcategory={subcategory}
