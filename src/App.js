@@ -16,10 +16,9 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<SubCategory />}/>
-          <Route path="/:id/:subId" element={<SubSubCategory />} />
+          <Route path="/:slug" element={<SubCategory />}/>
+          <Route path="/:slug/:subId" element={<SubSubCategory />} />
           <Route path="/:id/:subId/:productId" element={<Product />} />
-
           <Route path="*" element={<PageNotFound />} />
 
           {/* <Route path="/login" element={<Login />}></Route>

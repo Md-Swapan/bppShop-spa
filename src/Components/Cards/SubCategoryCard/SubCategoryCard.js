@@ -6,6 +6,11 @@ const SubCategoryCard = (props) => {
 
   const location = useLocation();
   const currentPath = location.pathname;
+
+  // const currentPath = location.pathname.split("/")
+  // const newPath = currentPath.slice(1,2)
+  // console.log(newPath)
+
   const navigate = useNavigate();
 
   const handleSubSubCategoryView = (id) => {

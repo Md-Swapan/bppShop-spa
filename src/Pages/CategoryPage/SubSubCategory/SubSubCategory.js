@@ -52,7 +52,7 @@ const SubCategoryData = [
 
 
 const SubSubCategory = () => {
-  const {id, subId} = useParams();
+  const {slug, subId} = useParams();
   const location = useLocation();
 
   const crumbs = location.pathname.split("/")
@@ -60,6 +60,7 @@ const SubSubCategory = () => {
   // .map(crumb => {
   //   currentLink = crumb
   // })
+
 
   const [subSubCategories, setSubSubCategories] = useState(SubCategoryData);
 
@@ -73,7 +74,7 @@ const SubSubCategory = () => {
             </li>
 
             <li className="breadcrumb-item active" aria-current="page">
-              <Link to="/:id" >{id}</Link>
+              <Link to="/:id" >{slug}</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               {subId}

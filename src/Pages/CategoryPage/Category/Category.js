@@ -16,8 +16,10 @@ import vehicle from "../../../Assets/Images/categoryImg/download (14).png";
 import hardware from "../../../Assets/Images/categoryImg/download (17).png";
 import usedProducts from "../../../Assets/Images/categoryImg/download (16).png";
 import watch from "../../../Assets/Images/categoryImg/download.png";
-import CategoryCard from './../../../Components/Cards/CategoryCard/CategoryCard';
-import axios from 'axios';
+import CategoryCard from "./../../../Components/Cards/CategoryCard/CategoryCard";
+import axios from "axios";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 const CategoryData = [
   {
@@ -121,25 +123,51 @@ const CategoryData = [
 ];
 
 const Category = () => {
-  const [allCategory, setAllCategory] = useState(CategoryData);
-
+  const [allCategory, setAllCategory] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`https://bppshop.com.bd/api/v1/categories`)
-    .then(res => {
+    axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
+      setAllCategory(res.data.data);
       console.log(res.data.data)
-      // setAllCategory(res.data)
-    })
-  }, [])
+      setLoading(false);
+    });
+  }, []);
 
   return (
     <>
       <div className="categoryView-section">
         <div className="categoryView-container">
           <div className="category_content">
-            {allCategory.map((category) => (
+            {/* {allCategory.map((category) => (
               <CategoryCard key={category.id} category={category}/>
-            ))}
+            ))} */}
+
+            <SkeletonTheme baseColor="#dddddd" highlightColor="#f5f5f5">
+              {loading ? (
+                <>
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                </>
+              ) : (
+                allCategory.map((category) => (
+                  <CategoryCard key={category.id} category={category} />
+                ))
+              )}
+            </SkeletonTheme>
           </div>
         </div>
       </div>

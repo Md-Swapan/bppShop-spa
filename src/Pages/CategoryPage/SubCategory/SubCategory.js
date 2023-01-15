@@ -50,8 +50,9 @@ const SubCategoryData = [
 ];
 
 const SubCategory = () => {
-  const { id } = useParams();
-  // const location = useLocation();
+  const {slug} = useParams();
+
+  // const location = useLocation(); 
   // const crumbs = location.pathname.split("/")
 
   const [subCategories, setSubCategories] = useState(SubCategoryData);
@@ -66,7 +67,7 @@ const SubCategory = () => {
               <Link to="/">Home</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              {id}
+              {slug}
             </li>
           </ol>
         </nav>
