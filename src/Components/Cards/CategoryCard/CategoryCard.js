@@ -2,13 +2,13 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
 
-const CategoryCard = (props) => {
-  // console.log(props)
-  const { img, name, id, slug } = props.category;
+const CategoryCard = ({category}) => {
+  // console.log(category)
+  const { img, name, id, slug } = category;
   const navigate = useNavigate()
 
   const handleSubCategoryView = (id) =>{
-    
+    // console.log(id);
     if(id){
       navigate(`/${slug}`)
     }

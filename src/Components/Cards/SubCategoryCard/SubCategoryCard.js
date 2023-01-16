@@ -1,28 +1,29 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import defaultProImg from '../../../Assets/Images/default-avatar.jpg'
 
-const SubCategoryCard = (props) => {
-  const { id, name, img, path } = props.subcategory;
-
-  const location = useLocation();
-  const currentPath = location.pathname;
+const SubCategoryCard = ({subcategory}) => {
+  // console.log(subcategory);
+  const { id, name, img, slug } = subcategory;
+  // console.log(slug);
 
   const navigate = useNavigate();
 
-  const handleSubSubCategoryView = (id) => {
+  const handleSubSubCategoryView = (id,subSlug) => {
+    // console.log(id,subSlug);
     if (id) {
-      navigate(currentPath + `/${path}`);
+      navigate(subSlug);
     }
   };
 
   return (
     <div
-      onClick={() => handleSubSubCategoryView(id)}
+      onClick={() => handleSubSubCategoryView(id,slug)}
       className="category_card_content"
     >
       <div className="card">
         <div className="card-body">
-          <img src={img} className="card-img-top" alt="" />
+          {img? <img src={img} className="card-img-top" alt="" /> : <img src={defaultProImg} className="card-img-top" alt="" />}
         </div>
         <div className="card-footer">{name}</div>
       </div>

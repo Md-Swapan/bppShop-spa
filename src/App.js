@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home allCategory={allCategory} />} />
           <Route path="/:slug" element={<SubCategory allCategory={allCategory}/>}/>
-          <Route path="/:slug/:subId" element={<SubSubCategory allCategory={allCategory}/>} />
-          <Route path="/:id/:subId/:productId" element={<Product allCategory={allCategory}/>} />
+          <Route path="/:slug/:subSlug" element={<SubSubCategory allCategory={allCategory}/>} />
+          <Route path="/:slug/:subSlug/:subSubSlug" element={<Product allCategory={allCategory}/>} />
           <Route path="*" element={<PageNotFound />} />
 
           {/* <Route path="/login" element={<Login />}></Route>
