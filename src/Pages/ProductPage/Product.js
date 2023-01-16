@@ -7,17 +7,29 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Product = ({ allCategory }) => {
+  // console.log(allCategory);
   const { slug, subSlug, subSubSlug } = useParams();
+  const categories = allCategory.find((item) => item.slug === slug);
+  // console.log("category : ",categories);
+
+  const subCategories = categories?.childes?.find((item) => item.slug === subSlug);
+  // console.log("sub-category : ",subCategories);
+
+  const subSubCategories = subCategories?.childes?.find((item) => item.slug === subSubSlug);
+  // console.log("sub-sub-category id: ",subSubCategories?.id);
+
 
   const [products, setProducts] = useState([]);
+  // console.log(products);
   const [loading,setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get("https://fakestoreapi.com/products").then((res) => {
-      setProducts(res.data);
+    axios.get(`https://bppshop.com.bd/api/v1/categories/products/${subSubCategories.id}`).then((res) => {
+      // console.log(res?.data?.data);
+      setProducts(res.data.data);
       setLoading(false);
     });
-  }, []);
+  }, [subSubCategories.id]);
 
   return (
     <div className="categoryView-section productView-section">

@@ -13,6 +13,7 @@ import axios from "axios";
 function App() {
   const [loading,setLoading]=useState(true);
   const [allCategory, setAllCategory] = useState([]);
+  // console.log(allCategory);
   useEffect(() => {
     axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
       setAllCategory(res.data.data);

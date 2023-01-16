@@ -3,7 +3,6 @@ import "./Home.css";
 import Category from './../CategoryPage/Category/Category';
 
 const Home = ({allCategory,loading}) => {
-  // console.log(allCategory);
   return (
     <>
       <div className="home_container">
