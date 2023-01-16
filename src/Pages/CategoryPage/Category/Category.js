@@ -21,118 +21,119 @@ import axios from "axios";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const CategoryData = [
-  {
-    id: 1,
-    path: "islamic",
-    title: "Islamic",
-    img: islamic,
-  },
-  {
-    id: 2,
-    path: "grocery",
-    title: "Grocery (only in Dhaka city)",
-    img: grocery,
-  },
-  {
-    id: 3,
-    path: "fashion",
-    title: "Fashion",
-    img: fashion,
-  },
-  {
-    id: 4,
-    path: "baby-care",
-    title: "Baby Care",
-    img: babyCare,
-  },
-  {
-    id: 5,
-    path: "cosmetics",
-    title: "Cosmetics",
-    img: cosmetic,
-  },
-  {
-    id: 6,
-    path: "shoes",
-    title: "Shoes",
-    img: shoe,
-  },
-  {
-    id: 7,
-    path: "eye-care",
-    title: "Eye Care",
-    img: eyeCare,
-  },
-  {
-    id: 8,
-    path: "sports",
-    title: "Sports",
-    img: sports,
-  },
-  {
-    id: 9,
-    path: "watch",
-    title: "Watch",
-    img: watch,
-  },
-  {
-    id: 10,
-    path: "electronics",
-    title: "Electronics",
-    img: electronics,
-  },
-  {
-    id: 11,
-    path: "furniture",
-    title: "Furniture",
-    img: furniture,
-  },
+// const CategoryData = [
+//   {
+//     id: 1,
+//     path: "islamic",
+//     title: "Islamic",
+//     img: islamic,
+//   },
+//   {
+//     id: 2,
+//     path: "grocery",
+//     title: "Grocery (only in Dhaka city)",
+//     img: grocery,
+//   },
+//   {
+//     id: 3,
+//     path: "fashion",
+//     title: "Fashion",
+//     img: fashion,
+//   },
+//   {
+//     id: 4,
+//     path: "baby-care",
+//     title: "Baby Care",
+//     img: babyCare,
+//   },
+//   {
+//     id: 5,
+//     path: "cosmetics",
+//     title: "Cosmetics",
+//     img: cosmetic,
+//   },
+//   {
+//     id: 6,
+//     path: "shoes",
+//     title: "Shoes",
+//     img: shoe,
+//   },
+//   {
+//     id: 7,
+//     path: "eye-care",
+//     title: "Eye Care",
+//     img: eyeCare,
+//   },
+//   {
+//     id: 8,
+//     path: "sports",
+//     title: "Sports",
+//     img: sports,
+//   },
+//   {
+//     id: 9,
+//     path: "watch",
+//     title: "Watch",
+//     img: watch,
+//   },
+//   {
+//     id: 10,
+//     path: "electronics",
+//     title: "Electronics",
+//     img: electronics,
+//   },
+//   {
+//     id: 11,
+//     path: "furniture",
+//     title: "Furniture",
+//     img: furniture,
+//   },
 
-  {
-    id: 12,
-    path: "pharmacy",
-    title: "Pharmacy",
-    img: pharmacy,
-  },
+//   {
+//     id: 12,
+//     path: "pharmacy",
+//     title: "Pharmacy",
+//     img: pharmacy,
+//   },
 
-  {
-    id: 13,
-    path: "home-appliance-decorate",
-    title: "Home Appliance & Decorate",
-    img: homeAppliance,
-  },
-  {
-    id: 14,
-    path: "vehicle",
-    title: "Vehicle",
-    img: vehicle,
-  },
-  {
-    id: 15,
-    path: "hardware-cables-sanitary",
-    title: "Hardware, Cables & Sanitary",
-    img: hardware,
-  },
-  {
-    id: 16,
-    path: "used-products",
-    title: "Used Products",
-    img: usedProducts,
-  },
-];
+//   {
+//     id: 13,
+//     path: "home-appliance-decorate",
+//     title: "Home Appliance & Decorate",
+//     img: homeAppliance,
+//   },
+//   {
+//     id: 14,
+//     path: "vehicle",
+//     title: "Vehicle",
+//     img: vehicle,
+//   },
+//   {
+//     id: 15,
+//     path: "hardware-cables-sanitary",
+//     title: "Hardware, Cables & Sanitary",
+//     img: hardware,
+//   },
+//   {
+//     id: 16,
+//     path: "used-products",
+//     title: "Used Products",
+//     img: usedProducts,
+//   },
+// ];
 
-const Category = () => {
-  const [allCategory, setAllCategory] = useState([]);
-  const [loading, setLoading] = useState(true);
+const Category = ({allCategory}) => {
+  console.log(allCategory)
+  // const [allCategory, setAllCategory] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
-      setAllCategory(res.data.data);
-      console.log(res.data.data)
-      setLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
+  //     setAllCategory(res.data.data);
+  //     console.log(res.data.data)
+  //     setLoading(false);
+  //   });
+  // }, []);
 
   return (
     <>
@@ -143,7 +144,7 @@ const Category = () => {
               <CategoryCard key={category.id} category={category}/>
             ))} */}
 
-            <SkeletonTheme baseColor="#dddddd" highlightColor="#f5f5f5">
+            {/* <SkeletonTheme baseColor="#dddddd" highlightColor="#f5f5f5">
               {loading ? (
                 <>
                   <Skeleton height="335px" borderRadius="10px" count={1} />
@@ -167,7 +168,7 @@ const Category = () => {
                   <CategoryCard key={category.id} category={category} />
                 ))
               )}
-            </SkeletonTheme>
+            </SkeletonTheme> */}
           </div>
         </div>
       </div>
