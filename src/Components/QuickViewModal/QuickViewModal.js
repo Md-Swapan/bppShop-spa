@@ -3,19 +3,19 @@ import React, { useEffect, useState } from "react";
 import prodimg from "../../Assets/Images/categoryImg/download (5).png";
 import "./QuickViewModal.css";
 
-const QuickViewModal = ({pid}) => {
+const QuickViewModal = ({ pid }) => {
   // console.log(pid);
   const [quantityCount, setQuantityCount] = useState(1);
-  const [productDetail,setProductDetail] = useState([]);
-  console.log(productDetail);
+  const [productDetail, setProductDetail] = useState([]);
+  // console.log(productDetail);
 
-
-  useEffect(()=>{
-    axios.get(`https://bppshop.com.bd/api/v1/products/details/${pid}`).then((res) => {
-      // console.log(res.data.data);
-      setProductDetail(res.data.data);
-    });
-  },[pid])
+  useEffect(() => {
+    axios
+      .get(`https://bppshop.com.bd/api/v1/products/details/${pid}`)
+      .then((res) => {
+        setProductDetail(res.data.data);
+      });
+  }, [pid]);
 
   return (
     <>
@@ -43,9 +43,12 @@ const QuickViewModal = ({pid}) => {
                     Product Code: <strong>{productDetail.code}</strong>
                     <span>
                       {" "}
-                      Stock: {
-                        productDetail.current_stock>0?<strong>Available</strong>:<strong>Not Available</strong>
-                      }
+                      Stock:{" "}
+                      {productDetail.current_stock > 0 ? (
+                        <strong>Available</strong>
+                      ) : (
+                        <strong>Not Available</strong>
+                      )}
                     </span>
                   </p>
                 </div>
@@ -61,13 +64,15 @@ const QuickViewModal = ({pid}) => {
                     <div className="size1">XXL</div>
                   </div>
                   <div className="d-flex color">
-                    <h5>Color: {
-                      productDetail.colors?.map(color=><>
-
-                        <div className="color1">red</div>
-                    {/* <div className="color2"></div> */}
-                      </>)
-                    }</h5>
+                    <h5>
+                      Color:{" "}
+                      {productDetail.colors?.map((color) => (
+                        <>
+                          <div className="color1">red</div>
+                          {/* <div className="color2"></div> */}
+                        </>
+                      ))}
+                    </h5>
                   </div>
                 </div>
                 <div className="quantity-content">

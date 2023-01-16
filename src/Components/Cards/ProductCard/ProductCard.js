@@ -18,7 +18,7 @@ const customStyles = {
 };
 
 const ProductCard = ({ product }) => {
-  const { id, name, slug, images, unit_price } = product;
+  const { id, name, images, unit_price } = product;
 
   const [pid,setPid]=useState(null);
   // console.log(pid);
@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
               <span onClick={()=>productDetailsView(id)}>
                 <button onClick={openModal}>
                   <i className="bi bi-eye-fill"></i>{" "}
-                  <span>Quick View {id}</span>
+                  <span>Quick View</span>
                 </button>
               </span>
             </div>
