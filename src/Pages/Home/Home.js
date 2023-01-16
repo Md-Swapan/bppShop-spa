@@ -2,12 +2,12 @@ import React from "react";
 import "./Home.css";
 import Category from './../CategoryPage/Category/Category';
 
-const Home = ({allCategory, loading}) => {
-  console.log(allCategory, loading)
+const Home = ({allCategory,loading}) => {
+  // console.log(allCategory);
   return (
     <>
       <div className="home_container">
-        <Category />
+        <Category allCategory={allCategory} loading={loading}/>
       </div>
     </>
   );

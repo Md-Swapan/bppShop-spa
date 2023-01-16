@@ -1,63 +1,15 @@
-import React, { useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
-import salahAccessories from "../../../Assets/Images/subCategoryImg/image 59.png";
-import modestDress from "../../../Assets/Images/subCategoryImg/image 60.png";
-import attarHalal from "../../../Assets/Images/subCategoryImg/image 61.png";
-import decorativeItems from "../../../Assets/Images/subCategoryImg/image 62.png";
-import islamicBooks from "../../../Assets/Images/subCategoryImg/image 63.png";
-import otherItems from "../../../Assets/Images/subCategoryImg/image 64.png";
-import { useState } from "react";
-import SubCategoryCard from './../../../Components/Cards/SubCategoryCard/SubCategoryCard';
-import axios from 'axios';
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import SubCategoryCard from "./../../../Components/Cards/SubCategoryCard/SubCategoryCard";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-const SubCategoryData = [
-  {
-    id: 1,
-    path: "salah-accessories",
-    title: "Salah Accessories",
-    img: salahAccessories,
-  },
-  {
-    id: 2,
-    path: "modest-dress",
-    title: "Modest Dress",
-    img: modestDress,
-  },
-  {
-    id: 3,
-    path: "attar-halal-fragrance",
-    title: "Attar & Halal Fragrance",
-    img: attarHalal,
-  },
-  {
-    id: 4,
-    path: "decorative-items",
-    title: "Decorative Items",
-    img: decorativeItems,
-  },
-  {
-    id: 5,
-    path: "islamic-books",
-    title: "Islamic Books",
-    img: islamicBooks,
-  },
-  {
-    id: 6,
-    path: "other-items",
-    title: "Other Items",
-    img: otherItems,
-  },
-];
+const SubCategory = ({ allCategory, loading }) => {
+  const { slug } = useParams();
+  // console.log(slug);
+  const subCategories = allCategory.find((item) => item.slug === slug);
+  // console.log(subCategories);
 
-const SubCategory = () => {
-  const {slug} = useParams();
-
-  // const location = useLocation(); 
-  // const crumbs = location.pathname.split("/")
-
-  const [subCategories, setSubCategories] = useState(SubCategoryData);
-
- 
   return (
     <>
       <div className="categoryView-section">
@@ -74,12 +26,34 @@ const SubCategory = () => {
 
         <div className="categoryView-container">
           <div className="category_content">
-            {subCategories.map((subcategory) => (
-              <SubCategoryCard
-                key={subcategory.id}
-                subcategory={subcategory}
-              />
-            ))}
+            <SkeletonTheme baseColor="#DDDDDD" highlightColor="#F5F5F5">
+              {loading ? (
+                <>
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                </>
+              ) : (
+                subCategories?.childes?.map((subcategory) => (
+                  <SubCategoryCard
+                    key={subcategory.id}
+                    subcategory={subcategory}
+                  />
+                ))
+              )}
+            </SkeletonTheme>
           </div>
         </div>
       </div>
