@@ -3,6 +3,7 @@ import "./ProductCard.css";
 import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
 import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
+import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
 
 
 const customStyles = {
@@ -19,7 +20,7 @@ const customStyles = {
 };
 
 const ProductCard = (props) => {
-  const { id, title, image, price } = props.product;
+  const { id, name, slug, images,unit_price } = props.product;
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
@@ -29,18 +30,23 @@ const ProductCard = (props) => {
     setIsOpen(false);
   }
 
+  const ProductDetailsView = (id) => {
+    console.log(id)
+  };
+
+
   return (
     <>
       <div className="product_card_content">
         <div className=" product-card">
           <div className=" product-card-body">
-            <img src={image} className="card-img-top" alt="" />
+            <img src={images[0]} className="card-img-top" alt="" /> 
             <div className="product-card-body-content">
-              <small>{title.toString().substring(0, 18)}...</small>
+              <small>{name.toString().substring(0, 18)}...</small>
               <br />
               Each
               <br />
-              <strong> ৳ {price}</strong>
+              <strong> ৳ {unit_price}</strong>
             </div>
             <div className="quickView_AddToCart_overlay">
               <div className="overlayAddToCartBtn">
@@ -48,9 +54,11 @@ const ProductCard = (props) => {
                 <i class="bi bi-cart-plus-fill"></i> */}
                 <img src={addToCartImg} alt="" />
               </div>
+              <span onClick={((e) => ProductDetailsView(id))}>
               <button onClick={openModal}>
                 <i className="bi bi-eye-fill"></i> <span>Quick View</span>
               </button>
+              </span>
             </div>
           </div>
 

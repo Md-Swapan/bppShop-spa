@@ -5,17 +5,11 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const SubSubCategory = ({ allCategory, loading }) => {
-  // console.log(allCategory);
   const { slug, subSlug } = useParams();
-  // console.log(slug,subSlug);
-
   const subCategories = allCategory.find((item) => item.slug === slug);
-  // console.log(subCategories?.childes);
-
   const subSubCategories = subCategories?.childes?.find(
     (item) => item.slug === subSlug
   );
-  // console.log(subSubCategories?.childes);
 
   return (
     <>
