@@ -1,27 +1,33 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
+import defaultProImg from "../../../Assets/Images/defaultImg.jpg";
 
-const CategoryCard = ({category}) => {
-  // console.log(category)
+const CategoryCard = ({ category }) => {
+  // console.log(category);
   const { img, name, id, slug } = category;
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const handleSubCategoryView = (id) =>{
-    // console.log(id);
-    if(id){
-      navigate(`/${slug}`)
+  const handleSubCategoryView = (id) => {
+    if (id) {
+      navigate(`/${slug}`);
     }
-  }
+  };
 
   return (
     <>
-      <div onClick={() => handleSubCategoryView(id)} className="category_card_content">
+      <div
+        onClick={() => handleSubCategoryView(id)}
+        className="category_card_content"
+      >
         <div className="card">
-        <div className="card-body">
-          {img? <img src={img} className="card-img-top" alt="" /> : <img src={defaultProImg} className="card-img-top" alt="" />}
-        </div>
-        <div className="card-footer">{name}</div>
+          <div className="card-body">
+            {img ? (
+              <img src={img} className="card-img-top" alt="" />
+            ) : (
+              <img src={defaultProImg} className="card-img-top" alt="" />
+            )}
+          </div>
+          <div className="card-footer">{name}</div>
         </div>
       </div>
     </>

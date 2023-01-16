@@ -4,7 +4,6 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 const Category = ({ allCategory, loading }) => {
-  // console.log(allCategory);
 
   return (
     <>

@@ -3,6 +3,7 @@ import "./ProductCard.css";
 import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
 import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
+import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
 
 const customStyles = {
   content: {
@@ -21,7 +22,6 @@ const ProductCard = ({ product }) => {
   const { id, name, images, unit_price } = product;
 
   const [pid,setPid]=useState(null);
-  // console.log(pid);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
@@ -40,7 +40,7 @@ const ProductCard = ({ product }) => {
       <div className="product_card_content">
         <div className=" product-card">
           <div className=" product-card-body">
-            <img src={images[0]} className="card-img-top" alt="" />
+            <img src={!images[0]?images[0]:defaultProImg} className="card-img-top" alt="" /> 
             <div className="product-card-body-content">
               <small>{name.toString().substring(0, 18)}...</small>
               <br />

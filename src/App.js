@@ -8,14 +8,15 @@ import SubCategory from "./Pages/CategoryPage/SubCategory/SubCategory";
 import SubSubCategory from "./Pages/CategoryPage/SubSubCategory/SubSubCategory";
 import Product from './Pages/ProductPage/Product';
 import axios from "axios";
+import { baseUrl } from "./BaseUrl/BaseUrl";
 
 
 function App() {
   const [loading,setLoading]=useState(true);
   const [allCategory, setAllCategory] = useState([]);
-  // console.log(allCategory);
+  
   useEffect(() => {
-    axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
+    axios.get(`${baseUrl}/categories`).then((res) => {
       setAllCategory(res.data.data);
       setLoading(false);
     });
@@ -31,12 +32,11 @@ function App() {
           <Route path="/:slug/:subSlug/:subSubSlug" element={<Product allCategory={allCategory}/>} />
           <Route path="*" element={<PageNotFound />} />
 
-          {/* <Route path="/login" element={<Login />}></Route>
+            {/* <Route path="/login" element={<Login />}></Route>
           <Route path="/signup" element={<Signup />}></Route>
           <Routes path="/" element={<Navigate replace to="/login" />} /> */}
-          
-        </Routes>
-      </Layout>
+          </Routes>
+        </Layout>
     </div>
   );
 }

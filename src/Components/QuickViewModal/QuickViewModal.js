@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import prodimg from "../../Assets/Images/categoryImg/download (5).png";
 import "./QuickViewModal.css";
+import { baseUrl } from "../../BaseUrl/BaseUrl";
 
 const QuickViewModal = ({ pid }) => {
   // console.log(pid);
@@ -10,11 +11,9 @@ const QuickViewModal = ({ pid }) => {
   // console.log(productDetail);
 
   useEffect(() => {
-    axios
-      .get(`https://bppshop.com.bd/api/v1/products/details/${pid}`)
-      .then((res) => {
-        setProductDetail(res.data.data);
-      });
+    axios.get(`${baseUrl}/products/details/${pid}`).then((res) => {
+      setProductDetail(res.data.data);
+    });
   }, [pid]);
 
   return (
