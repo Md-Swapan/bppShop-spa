@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import prodimg from "../../Assets/Images/categoryImg/download (5).png";
 import "./QuickViewModal.css";
 
-const QuickViewModal = () => {
+const QuickViewModal = ({pid}) => {
+  // console.log(pid);
   const [quantityCount, setQuantityCount] = useState(1);
+  const [productDetail,setProductDetail] = useState([]);
+  console.log(productDetail);
+
+
+  useEffect(()=>{
+    axios.get(`https://bppshop.com.bd/api/v1/products/details/${pid}`).then((res) => {
+      // console.log(res.data.data);
+      setProductDetail(res.data.data);
+    });
+  },[pid])
+
   return (
     <>
       <div className="modal-container">
@@ -19,23 +32,25 @@ const QuickViewModal = () => {
             <div className="col-sm-8">
               <div className="detail-content-view">
                 <div className="productName_wishlist">
-                  <h4 className="productName"> Product Name </h4>
+                  <h4 className="productName"> {productDetail.name} </h4>
                   <span>
                     <i class="bi bi-heart"></i>
                   </span>
                 </div>
                 <div className="price_Stock_Code">
-                  <h4 className="prices">৳400</h4>
+                  <h4 className="prices">৳{productDetail.unit_price}</h4>
                   <p>
-                    Product Code: <strong>#SRG56gtr</strong>
+                    Product Code: <strong>{productDetail.code}</strong>
                     <span>
                       {" "}
-                      Stock: <strong>Available</strong>
+                      Stock: {
+                        productDetail.current_stock>0?<strong>Available</strong>:<strong>Not Available</strong>
+                      }
                     </span>
                   </p>
                 </div>
                 <div className="pc-size-color">
-                  <h5>Pc: 1</h5>
+                  <h5>Pc: {productDetail.current_stock}</h5>
 
                   <div className="d-flex size">
                     <h5>Size: </h5>
@@ -46,9 +61,13 @@ const QuickViewModal = () => {
                     <div className="size1">XXL</div>
                   </div>
                   <div className="d-flex color">
-                    <h5>Color: </h5>
-                    <div className="color1"></div>
-                    <div className="color2"></div>
+                    <h5>Color: {
+                      productDetail.colors?.map(color=><>
+
+                        <div className="color1">red</div>
+                    {/* <div className="color2"></div> */}
+                      </>)
+                    }</h5>
                   </div>
                 </div>
                 <div className="quantity-content">
@@ -82,7 +101,6 @@ const QuickViewModal = () => {
                 </div>
                 <div className="about-div" style={{ margin: "10px 0px" }}>
                   <h5>About this item</h5>
-
                   <span>
                     In publishing and graphic design, Lorem ipsum is a
                     placeholder text commonly used to demonstrate the visual

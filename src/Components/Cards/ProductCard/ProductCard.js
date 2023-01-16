@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductCard.css";
 import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
 import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
 import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
-
 
 const customStyles = {
   content: {
@@ -15,12 +14,13 @@ const customStyles = {
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
     borderRadius: "10px",
-    paddingBottom: "20px"
+    paddingBottom: "20px",
   },
 };
 
-const ProductCard = (props) => {
-  const { id, name, slug, images,unit_price } = props.product;
+const ProductCard = ({ product }) => {
+  const { id, name, slug, images, unit_price } = product;
+  const [pid,setPid]=useState(null);
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
   function openModal() {
@@ -30,10 +30,9 @@ const ProductCard = (props) => {
     setIsOpen(false);
   }
 
-  const ProductDetailsView = (id) => {
-    console.log(id)
-  };
-
+  const productDetailsView=(pid)=>{
+    setPid(pid);
+  }
 
   return (
     <>
@@ -54,10 +53,11 @@ const ProductCard = (props) => {
                 <i class="bi bi-cart-plus-fill"></i> */}
                 <img src={addToCartImg} alt="" />
               </div>
-              <span onClick={((e) => ProductDetailsView(id))}>
-              <button onClick={openModal}>
-                <i className="bi bi-eye-fill"></i> <span>Quick View</span>
-              </button>
+              <span onClick={()=>productDetailsView(id)}>
+                <button onClick={openModal}>
+                  <i className="bi bi-eye-fill"></i>{" "}
+                  <span>Quick View {id}</span>
+                </button>
               </span>
             </div>
           </div>
@@ -76,10 +76,12 @@ const ProductCard = (props) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <span onClick={closeModal} className="modalCloseBtn"><i class="bi bi-x-lg"></i></span>
-        <br/>
-        <QuickViewModal />
-        <br/>
+        <span onClick={closeModal} className="modalCloseBtn">
+          <i class="bi bi-x-lg"></i>
+        </span>
+        <br />
+        <QuickViewModal pid={pid}/>
+        <br />
       </Modal>
     </>
   );
