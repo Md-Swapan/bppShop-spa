@@ -1,14 +1,15 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import SubCategoryCard from './../../../Components/Cards/SubCategoryCard/SubCategoryCard';
+import SubCategoryCard from "./../../../Components/Cards/SubCategoryCard/SubCategoryCard";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-const SubCategory = ({allCategory}) => {
-  const {slug} = useParams();
+const SubCategory = ({ allCategory, loading }) => {
+  const { slug } = useParams();
   // console.log(slug);
-  const subCategories = allCategory.find(item => item.slug === slug);
+  const subCategories = allCategory.find((item) => item.slug === slug);
   // console.log(subCategories);
 
- 
   return (
     <>
       <div className="categoryView-section">
@@ -25,12 +26,34 @@ const SubCategory = ({allCategory}) => {
 
         <div className="categoryView-container">
           <div className="category_content">
-            {subCategories?.childes?.map((subcategory) => (
-              <SubCategoryCard
-                key={subcategory.id}
-                subcategory={subcategory}
-              />
-            ))}
+            <SkeletonTheme baseColor="#DDDDDD" highlightColor="#F5F5F5">
+              {loading ? (
+                <>
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                </>
+              ) : (
+                subCategories?.childes?.map((subcategory) => (
+                  <SubCategoryCard
+                    key={subcategory.id}
+                    subcategory={subcategory}
+                  />
+                ))
+              )}
+            </SkeletonTheme>
           </div>
         </div>
       </div>

@@ -1,23 +1,25 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import SubSubCategoryCard from './../../../Components/Cards/SubSubCategoryCard/SubSubCategoryCard';
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import SubSubCategoryCard from "./../../../Components/Cards/SubSubCategoryCard/SubSubCategoryCard";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-
-
-const SubSubCategory = ({allCategory}) => {
+const SubSubCategory = ({ allCategory, loading }) => {
   // console.log(allCategory);
-  const {slug,subSlug}=useParams();
+  const { slug, subSlug } = useParams();
   // console.log(slug,subSlug);
-  
-  const subCategories = allCategory.find(item => item.slug === slug);
+
+  const subCategories = allCategory.find((item) => item.slug === slug);
   // console.log(subCategories?.childes);
 
-  const subSubCategories=subCategories?.childes?.find(item => item.slug === subSlug);
+  const subSubCategories = subCategories?.childes?.find(
+    (item) => item.slug === subSlug
+  );
   // console.log(subSubCategories?.childes);
 
   return (
     <>
-     <div className="categoryView-section">
+      <div className="categoryView-section">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb my-4">
             <li className="breadcrumb-item">
@@ -25,7 +27,7 @@ const SubSubCategory = ({allCategory}) => {
             </li>
 
             <li className="breadcrumb-item active" aria-current="page">
-              <Link to={`/${slug}`} >{slug}</Link>
+              <Link to={`/${slug}`}>{slug}</Link>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
               {subSlug}
@@ -35,15 +37,37 @@ const SubSubCategory = ({allCategory}) => {
 
         <div className="categoryView-container">
           <div className="category_content">
-            {subSubCategories?.childes?.map((SubSubcategory) => (
-              <SubSubCategoryCard
-                key={SubSubcategory.id}
-                SubSubcategory={SubSubcategory}
-              />
-            ))}
+            <SkeletonTheme baseColor="#DDDDDD" highlightColor="#F5F5F5">
+              {loading ? (
+                <>
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                  <Skeleton height="335px" borderRadius="10px" count={1} />
+                </>
+              ) : (
+                subSubCategories?.childes?.map((SubSubcategory) => (
+                  <SubSubCategoryCard
+                    key={SubSubcategory.id}
+                    SubSubcategory={SubSubcategory}
+                  />
+                ))
+              )}
+            </SkeletonTheme>
           </div>
         </div>
-      </div> 
+      </div>
     </>
   );
 };

@@ -11,11 +11,12 @@ import axios from "axios";
 
 
 function App() {
+  const [loading,setLoading]=useState(true);
   const [allCategory, setAllCategory] = useState([]);
-  // console.log(allCategory);
   useEffect(() => {
     axios.get(`https://bppshop.com.bd/api/v1/categories`).then((res) => {
       setAllCategory(res.data.data);
+      setLoading(false);
     });
   }, []);
 
@@ -23,9 +24,9 @@ function App() {
     <div className="App">
       <Layout>
         <Routes>
-          <Route path="/" element={<Home allCategory={allCategory} />} />
-          <Route path="/:slug" element={<SubCategory allCategory={allCategory}/>}/>
-          <Route path="/:slug/:subSlug" element={<SubSubCategory allCategory={allCategory}/>} />
+          <Route path="/" element={<Home allCategory={allCategory} loading={loading}/>} />
+          <Route path="/:slug" element={<SubCategory allCategory={allCategory} loading={loading}/>}/>
+          <Route path="/:slug/:subSlug" element={<SubSubCategory allCategory={allCategory} loading={loading}/>} />
           <Route path="/:slug/:subSlug/:subSubSlug" element={<Product allCategory={allCategory}/>} />
           <Route path="*" element={<PageNotFound />} />
 
