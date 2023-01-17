@@ -6,6 +6,7 @@ import QuickViewModal from "../../QuickViewModal/QuickViewModal";
 import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
 import { useDispatch } from 'react-redux';
 import { addToCart } from './../../../Redux/Actions/CartAction';
+Modal.setAppElement('#root');
 
 const customStyles = {
   content: {
@@ -46,11 +47,13 @@ const ProductCard = ({ product }) => {
           <div className=" product-card-body">
             <img src={!images[0]?images[0]:defaultProImg} className="card-img-top" alt="" /> 
             <div className="product-card-body-content">
-              <small>{name.toString().substring(0, 18)}...</small>
+              <small>{name.toString().substring(0, 25)}...</small>
               <br />
+             <div className="product-card-body-content-unit-price">
               Each
               <br />
               <strong> ৳ {unit_price}</strong>
+             </div>
             </div>
             <div className="quickView_AddToCart_overlay">
               <div className="overlayAddToCartBtn">

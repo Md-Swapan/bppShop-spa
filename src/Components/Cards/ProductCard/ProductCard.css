@@ -26,6 +26,10 @@
 
 .product-card-body-content {
   height: 30%;
+  text-align: center;
+}
+.product-card-body-content-unit-price{
+  text-align: center;
 }
 .quickView_AddToCart_overlay {
   position: absolute;
