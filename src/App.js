@@ -10,11 +10,17 @@ import Product from './Pages/ProductPage/Product';
 import axios from "axios";
 import { baseUrl } from "./BaseUrl/BaseUrl";
 
+import { getCategories } from "./Redux/Actions/CategoriesAction";
+import { useDispatch, useSelector,  } from "react-redux";
+
 
 function App() {
   const [loading,setLoading]=useState(true);
   const [allCategory, setAllCategory] = useState([]);
-  
+
+  const dispatch = useDispatch()
+  // dispatch(getCategories)
+
   useEffect(() => {
     axios.get(`${baseUrl}/categories`).then((res) => {
       setAllCategory(res.data.data);

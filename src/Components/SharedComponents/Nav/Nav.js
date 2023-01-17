@@ -4,7 +4,9 @@ import "./Nav.css";
 import defaultAvatar from "../../../Assets/Images/default-avatar.jpg";
 import bppShopsLogo from "../../../Assets/Images/bppshopslogo.png";
 import Sidebar from "../Sidebar/Sidebar";
+
 const Nav = () => {
+
   return (
     <>
       <div className="navbar-section">
@@ -33,7 +35,7 @@ const Nav = () => {
                   <i className="bi bi-search"></i>
                 </span>
               </div>
-
+              
               <div className="userProfileTab">
                 <div
                   className="user-profile "
@@ -50,6 +52,8 @@ const Nav = () => {
                   <img src={defaultAvatar} alt="profile" />
                   {/* )} */}
                 </div>
+                
+                
 
                 <div className="dropdown-menu profile_dropdown">
                   <div

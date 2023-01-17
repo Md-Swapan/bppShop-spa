@@ -4,6 +4,8 @@ import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
 import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
 import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
+import { useDispatch } from 'react-redux';
+import { addToCart } from './../../../Redux/Actions/CartAction';
 
 const customStyles = {
   content: {
@@ -35,6 +37,8 @@ const ProductCard = ({ product }) => {
     setPid(pid);
   }
 
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="product_card_content">
@@ -64,7 +68,7 @@ const ProductCard = ({ product }) => {
           </div>
 
           <div className="card-footer product-card-footer">
-            <button type="">
+            <button onClick={() => dispatch(addToCart(product))} type="">
               <i className="bi bi-cart-plus"></i> Add To Cart
             </button>
           </div>

@@ -5,10 +5,8 @@ import "./QuickViewModal.css";
 import { baseUrl } from "../../BaseUrl/BaseUrl";
 
 const QuickViewModal = ({ pid }) => {
-  // console.log(pid);
   const [quantityCount, setQuantityCount] = useState(1);
   const [productDetail, setProductDetail] = useState([]);
-  // console.log(productDetail);
 
   useEffect(() => {
     axios.get(`${baseUrl}/products/details/${pid}`).then((res) => {
@@ -16,6 +14,11 @@ const QuickViewModal = ({ pid }) => {
     });
   }, [pid]);
 
+  const choiceOptions = productDetail?.choice_options?.map((item) => item);
+
+  // const option = choiceOptions?.options?.map(item => item)
+  // console.log(option)
+ 
   return (
     <>
       <div className="modal-container">
@@ -53,14 +56,16 @@ const QuickViewModal = ({ pid }) => {
                 </div>
                 <div className="pc-size-color">
                   <h5>Pc: {productDetail.current_stock}</h5>
-
+                  
                   <div className="d-flex size">
-                    <h5>Size: </h5>
-                    <div className="size1">S</div>
-                    <div className="size1">M</div>
-                    <div className="size1">L</div>
-                    <div className="size1">XL</div>
-                    <div className="size1">XXL</div>
+                    {
+                      choiceOptions?.map(item => <>
+                      <h5>{item?.title}: </h5>
+
+                      <div className="size1"></div>
+                      </>)
+                    }
+                    
                   </div>
                   <div className="d-flex color">
                     <h5>

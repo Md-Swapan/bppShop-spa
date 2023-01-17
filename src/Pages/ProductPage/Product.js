@@ -23,13 +23,13 @@ const Product = ({ allCategory }) => {
   useEffect(() => {
     axios
       .get(
-        `${baseUrl}/categories/products/${subSubCategories.id}`
+        `${baseUrl}/categories/products/${subSubCategories?.id}`
       )
       .then((res) => {
         setProducts(res.data.data);
         setLoading(false);
       });
-  }, [subSubCategories.id]);
+  }, [subSubCategories?.id]);
   
 
   return (
