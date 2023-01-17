@@ -1,0 +1,10 @@
+.cart_container_section{
+    height: 150px;
+    width: 150px;
+    background: rgb(213, 167, 167);
+}
+.cart_item_containt{
+    background: wheat;
+    height: 110px;
+    text-align: center;
+}
