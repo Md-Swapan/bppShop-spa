@@ -4,6 +4,7 @@ import addToCartImg from "../../../Assets/Images/icons/addToCart.png";
 import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
 import defaultProImg from '../../../Assets/Images/defaultImg.jpg'
+Modal.setAppElement('#root');
 
 const customStyles = {
   content: {
