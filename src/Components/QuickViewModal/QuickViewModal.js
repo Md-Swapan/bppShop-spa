@@ -31,7 +31,11 @@ const QuickViewModal = ({ pid }) => {
             <div className="col-sm-8">
               <div className="detail-content-view">
                 <div className="productName_wishlist">
-                  <h4 className="productName"> {productDetail.name}{pid} </h4>
+                  <h4 className="productName">
+                    {" "}
+                    {productDetail.name}
+                    {pid}{" "}
+                  </h4>
                   <span>
                     <i class="bi bi-heart"></i>
                   </span>
@@ -54,24 +58,46 @@ const QuickViewModal = ({ pid }) => {
                 <div className="pc-size-color">
                   {/* <h5>Pc: {productDetail.current_stock}</h5> */}
 
-                  <div className="d-flex size">
-                  {
-                    productDetail?.choice_options?.map(list=><>
-                      <h5>{list?.title}: </h5>
-                      <div className="d-flex">{list?.options?.map(option=><span className="size1">{option}</span>)}</div>
-                    </>)
-                  }
+                  <div
+                    className={
+                      productDetail?.choice_options?.length < 1
+                        ? "d-none"
+                        : "d-flex size"
+                    }
+                  >
+                    {productDetail?.choice_options?.map((list) => (
+                      <>
+                        <h5>{list?.title}: </h5>
+                        <div className="d-flex">
+                          {list?.options?.map((option) => (
+                            <span className="size1">{option}</span>
+                          ))}
+                        </div>
+                      </>
+                    ))}
                   </div>
-                  <div className="d-flex color">
-                    <h5>Color:{" "} </h5>
-                     <div className="d-flex">
-                     {productDetail.colors?.map((color) => (
+
+                  <div
+                    className={
+                      productDetail?.colors?.length < 1
+                        ? "d-none"
+                        : "d-flex color"
+                    }
+                  >
+                    <h5>Color: </h5>
+                    <div className="d-flex">
+                      {productDetail.colors?.map((color) => (
                         <>
-                          <div style={{ background: `${color.code}`,margin:"0px 2px" }} className="color1"></div>
+                          <div
+                            style={{
+                              background: `${color.code}`,
+                              margin: "0px 2px",
+                            }}
+                            className="color1"
+                          ></div>
                         </>
                       ))}
-                     </div>
-                   
+                    </div>
                   </div>
                 </div>
                 <div className="quantity-content">
@@ -100,7 +126,9 @@ const QuickViewModal = ({ pid }) => {
                     </div>
                   </div>
                   <div className="totalPrice">
-                    <h5>Total Price: ৳ {quantityCount*productDetail.unit_price}</h5>
+                    <h5>
+                      Total Price: ৳ {quantityCount * productDetail.unit_price}
+                    </h5>
                   </div>
                 </div>
                 <div className="about-div" style={{ margin: "10px 0px" }}>
