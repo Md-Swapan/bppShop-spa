@@ -22,7 +22,7 @@ const customStyles = {
 };
 
 const ProductCard = ({ product }) => {
-  const { id, name, images, unit_price } = product;
+  const { id, name, images, unit_price, choice_options } = product;
 
   const [pid,setPid]=useState(null);
 
@@ -50,7 +50,11 @@ const ProductCard = ({ product }) => {
               <small>{name.toString().substring(0, 25)}...</small>
               <br />
              <div className="product-card-body-content-unit-price">
-              Each
+              <span>
+              {choice_options?.map((list) => (
+                        <>{list?.title} : </>
+                    ))}
+              </span>
               <br />
               <strong> ৳ {unit_price}</strong>
              </div>

@@ -1,11 +1,22 @@
+// const initialState = {
+//   Cart : []
+// }
 const CartReducer = (state = [], action) => {
 
   switch(action.type){
     case 'ADD_TO_CART': {
       return [...state, action.payload]
+
+      // const newState = {
+      //   ...state,
+      //   Cart : [...state.Cart, action.payload]
+      // }
+      // return newState
     }
     case 'REMOVE_FROM_CART': {
-      const newState = state.Cart.filter(item => item.product_id !== action.payload)
+      const newState = state.filter(item => item.product_id !== action.payload)
+      // const newState = state.filter(item => item)
+      // const newCartState = newState.filter(item => item.product_id !== action.payload)
       return newState;
     }
     case 'CLEAR_CART': {
