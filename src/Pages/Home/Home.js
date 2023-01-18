@@ -7,6 +7,8 @@ const Home = ({allCategory,loading}) => {
     <>
       <div className="home_container">
         <Category allCategory={allCategory} loading={loading}/>
+
+        
       </div>
     </>
   );
