@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./CartDetailsView.css";
 import defaultProImg from "../../../Assets/Images/defaultImg.jpg";
 import { RemoveFromCart } from "../../../Redux/Actions/CartAction";
+import { Link } from "react-router-dom";
 
 const CartDetailsView = () => {
   const [quantityCount, setQuantityCount] = useState(1);
@@ -80,7 +81,9 @@ const CartDetailsView = () => {
           <h6>Grand Total: </h6>
           <h6>400</h6>
         </div>
-        <button type="">Place Order</button>
+        <Link to="shipping-details">
+          <button type="">Place Order</button>
+        </Link>
       </div>
     </div>
   );
