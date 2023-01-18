@@ -1,0 +1,48 @@
+.shipping_modal_container {
+    height: auto;
+    width: 900px;
+}
+
+.shipping_modal_content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.shipping_modal_header {
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(29, 25, 25);
+}
+
+.shipping_modal_line {
+    height: 1px;
+    margin: 50px 0px;
+    padding: 0px;
+}
+
+.shipping_modal_address_box {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 14px;
+    margin: 20px;
+}
+
+.shipped_person {
+    display: flex;
+    justify-content: space-between;
+}
+
+.default_btn {
+    color: #41efb2;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+}
+
+.set_default_btn {
+    color: #ef8341;
+    font-weight: 600;
+    cursor: pointer;
+}

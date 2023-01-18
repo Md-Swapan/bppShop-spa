@@ -9,7 +9,7 @@ const CartDetailsView = () => {
   const [quantityCount, setQuantityCount] = useState(1);
 
   const cartItems = useSelector((state) => {
-    console.log(state.Cart);
+    // console.log(state.Cart);
     return state.Cart;
   });
 
