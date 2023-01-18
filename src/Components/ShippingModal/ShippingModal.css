@@ -1,5 +1,5 @@
 .shipping_modal_container {
-    height: auto;
+    min-height: 450px;
     width: 900px;
 }
 
@@ -21,28 +21,39 @@
     padding: 0px;
 }
 
-.shipping_modal_address_box {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+.shipping_address_input_container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.shipping_address_input {
+    width: 100%;
+    padding: 8px 10px;
+    outline: none;
+    border: 1px solid rgb(201, 201, 244);
     border-radius: 5px;
-    padding: 20px;
-    font-size: 14px;
-    margin: 20px;
 }
 
-.shipped_person {
+.shipping_modal_close {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    width: 98%;
 }
 
-.default_btn {
-    color: #41efb2;
-    font-weight: 600;
+.shipping_modal_close_btn, .shipping_modal_save_btn {
+    margin: 40px 0px 0px 0px;
+    padding: 5px 40px;
+    border-radius: 5px;
     cursor: pointer;
-    display: none;
+    color: white;
 }
 
-.set_default_btn {
-    color: #ef8341;
-    font-weight: 600;
-    cursor: pointer;
+.shipping_modal_close_btn {
+    background: #ef8341;
+}
+
+.shipping_modal_save_btn {
+    background: #413d3a;
 }

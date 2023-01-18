@@ -54,6 +54,10 @@
 .shiped_address, .billing_address{
     margin-top: 14px;
 }
+.shiped_address a, .billing_address a{
+    text-decoration: none;
+}
+
 .home_text{
     background: #f99d71;
     padding: 2px 5px;

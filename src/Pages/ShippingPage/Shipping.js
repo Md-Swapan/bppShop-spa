@@ -4,31 +4,9 @@ import delivery from "../../Assets/Images/shiping-icons/delivery.png";
 import money from "../../Assets/Images/shiping-icons/money.png";
 import Genuine from "../../Assets/Images/shiping-icons/Genuine.png";
 import Payment from "../../Assets/Images/shiping-icons/Payment.png";
-import Modal from "react-modal";
-import ShippingModal from './../../Components/ShippingModal/ShippingModal';
-Modal.setAppElement("#root");
-
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    borderRadius: "10px",
-    paddingBottom: "20px",
-  },
-};
+import { Link } from "react-router-dom";
 
 const Shipping = () => {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
-    setIsOpen(true);
-  }
-  function closeModal() {
-    setIsOpen(false);
-  }
   return (
     <>
       <div className="shiping-view-section">
@@ -38,7 +16,7 @@ const Shipping = () => {
               <div className="shiping-heading">
                 SHIPPING AND BILLING ADDRESS
               </div>
-              <hr className="shippin_billing_header_line"/>
+              <hr className="shippin_billing_header_line" />
               <div class="progress_container">
                 <div
                   class="progress_content"
@@ -57,9 +35,12 @@ const Shipping = () => {
                   <div className="shiped_address">
                     <span className="home_text">home</span> 01676667145 | 15,
                     Chandpai, Mongla, Bagerhat .{" "}
-                    <span onClick={openModal} className="change_text">
-                      <i class="bi bi-pencil-fill"></i> Change
-                    </span>
+                    <Link to="/add-shipping-address">
+                      {" "}
+                      <span className="change_text">
+                        <i class="bi bi-pencil-fill"></i> Change
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -74,7 +55,7 @@ const Shipping = () => {
                   <div className="billing_address">
                     <span className="home_text">home</span> 01676667145 | 15,
                     Chandpai, Mongla, Bagerhat .{" "}
-                    <span onClick={openModal} className="change_text">
+                    <span className="change_text">
                       <i class="bi bi-pencil-fill"></i> Change
                     </span>
                   </div>
@@ -166,15 +147,6 @@ const Shipping = () => {
           </div>
         </div>
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <ShippingModal closeModal={closeModal}/>
-        <br />
-      </Modal>
     </>
   );
 };

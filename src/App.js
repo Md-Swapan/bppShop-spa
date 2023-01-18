@@ -13,6 +13,7 @@ import { baseUrl } from "./BaseUrl/BaseUrl";
 import { getCategories } from "./Redux/Actions/CategoriesAction";
 import { useDispatch, useSelector,  } from "react-redux";
 import Shipping from "./Pages/ShippingPage/Shipping";
+import AddShippingAddress from "./Pages/ShippingPage/AddShippingAddress";
 
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
           <Route path="/:slug" element={<SubCategory allCategory={allCategory} loading={loading}/>}/>
           <Route path="/:slug/:subSlug" element={<SubSubCategory allCategory={allCategory} loading={loading}/>} />
           <Route path="/:slug/:subSlug/:subSubSlug" element={<Product allCategory={allCategory}/>} />
-          <Route path="/shipping-details" element={<Shipping/>} />
+          <Route path="/shipping-details" element={<Shipping></Shipping>}></Route>
+          <Route path="/add-shipping-address" element={<AddShippingAddress></AddShippingAddress>}></Route>
           <Route path="*" element={<PageNotFound />} />
 
             {/* <Route path="/login" element={<Login />}></Route>
