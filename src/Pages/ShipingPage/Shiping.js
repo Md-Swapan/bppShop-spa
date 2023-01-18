@@ -1,6 +1,9 @@
 import React from "react";
 import "./Shiping.css";
-
+import delivery from '../../Assets/Images/shiping-icons/delivery.png';
+import money from '../../Assets/Images/shiping-icons/money.png';
+import Genuine from '../../Assets/Images/shiping-icons/Genuine.png';
+import Payment from '../../Assets/Images/shiping-icons/Payment.png';
 const Shiping = () => {
   return (
     <div className="shiping-view-section">
@@ -50,15 +53,86 @@ const Shiping = () => {
             </div>
             <div className="shop_payment_btn_content">
               <div className="shop_payment_btn">
-                <div className="shop_cart_btn"><i class="bi bi-chevron-left"></i> Shop cart</div>
-                <div className="proceed_payment_btn">Proceed payment <i class="bi bi-chevron-right"></i></div>
+                <div className="shop_cart_btn">
+                  <i class="bi bi-chevron-left"></i> Shop cart
+                </div>
+                <div className="proceed_payment_btn">
+                  Proceed payment <i class="bi bi-chevron-right"></i>
+                </div>
               </div>
             </div>
           </div>
           <div className="col-lg-4">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Praesentium, suscipit vitae earum doloribus asperiores blanditiis
-            accusantium iste facere eos repellendus!
+            <div className="shiping_amount_container">
+              <div className="shiping_amount_content">
+                <div>Sub Total</div>
+                <div className="amount_text">৳945.00</div>
+              </div>
+              <div className="shiping_amount_content">
+                <div>Tax</div>
+                <div className="amount_text">৳0.00</div>
+              </div>
+              <div className="shiping_amount_content">
+                <div>Shiping</div>
+                <div className="amount_text">৳120.00</div>
+              </div>
+              <div className="shiping_amount_content">
+                <div>Discount on product</div>
+                <div className="amount_text">-৳45.00</div>
+              </div>
+              <div>
+                <input
+                  className="coupon_input"
+                  type="text"
+                  placeholder="Coupon code"
+                />
+              </div>
+              <div>
+                <button className="coupon_btn">Apply code</button>
+              </div>
+              <hr />
+              <div className="shiping_amount_content">
+                <div>Total</div>
+                <div className="amount_text">৳1,020.00</div>
+              </div>
+              <div class="container mt-4">
+                <div class="row">
+                  <div class="col-md-3 p-0 text-center ">
+                    <img
+                      class="order-summery-footer-image"
+                      src={delivery}
+                      alt=""
+                    />
+                    <div class="deal-title">3 Days free delivery </div>
+                  </div>
+
+                  <div class="col-md-3 p-0 text-center">
+                    <img
+                      class="order-summery-footer-image"
+                      src={money}
+                      alt=""
+                    />
+                    <div class="deal-title">Money back guarantee</div>
+                  </div>
+                  <div class="col-md-3 p-0 text-center">
+                    <img
+                      class="order-summery-footer-image"
+                      src={Genuine}
+                      alt=""
+                    />
+                    <div class="deal-title">100% Genuine Product</div>
+                  </div>
+                  <div class="col-md-3 p-0 text-center">
+                    <img
+                      class="order-summery-footer-image"
+                      src={Payment}
+                      alt=""
+                    />
+                    <div class="deal-title">Authentic payment</div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -93,3 +93,37 @@ margin: 40px 0px;
     text-align: center;
     cursor: pointer;
 }
+.shiping_amount_container{
+    margin-top: 45px;
+    padding: 0px 10px;
+}
+.shiping_amount_content{
+display: flex;
+justify-content: space-between;
+
+}
+.amount_text{
+    font-weight: bold;
+}
+.coupon_input_content{
+    margin: 10px 0px;
+}
+.coupon_input{
+    width: 100%;
+    padding: 8px 10px;
+    outline: none;
+    margin: 12px 0px;
+    border: 1px solid rgb(175, 175, 249);
+    border-radius: 5px;
+}
+.coupon_btn{
+    background: #86bc19;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.deal-title{
+    font-size: 12px;
+}
