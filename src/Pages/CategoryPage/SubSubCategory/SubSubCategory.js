@@ -6,7 +6,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 const SubSubCategory = ({ allCategory, loading }) => {
   const { slug, subSlug } = useParams();
-  const subCategories = allCategory.find((item) => item.slug === slug);
+  const subCategories = allCategory?.find((item) => item.slug === slug);
   const subSubCategories = subCategories?.childes?.find(
     (item) => item.slug === subSlug
   );

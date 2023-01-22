@@ -8,13 +8,14 @@ import "react-loading-skeleton/dist/skeleton.css";
 import { baseUrl } from "../../BaseUrl/BaseUrl";
 
 const Product = ({ allCategory }) => {
+  // console.log(allCategory)
   const { slug, subSlug, subSubSlug } = useParams();
-  const categories = allCategory.find((item) => item.slug === slug);
+  const categories = allCategory?.find((item) => item?.slug === slug);
   const subCategories = categories?.childes?.find(
-    (item) => item.slug === subSlug
+    (item) => item?.slug === subSlug
   );
   const subSubCategories = subCategories?.childes?.find(
-    (item) => item.slug === subSubSlug
+    (item) => item?.slug === subSubSlug
   );
 
   const [products, setProducts] = useState([]);
@@ -26,7 +27,8 @@ const Product = ({ allCategory }) => {
         `${baseUrl}/categories/products/${subSubCategories?.id}`
       )
       .then((res) => {
-        setProducts(res.data.data);
+        setProducts(res?.data?.data);
+        console.log(res)
         setLoading(false);
       });
   }, [subSubCategories?.id]);
@@ -74,8 +76,8 @@ const Product = ({ allCategory }) => {
                 <Skeleton height="335px" borderRadius="10px" count={1} />
               </>
             ) : (
-              products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+              products?.map((product) => (
+                <ProductCard key={product?.id} product={product} />
               ))
             )}
           </SkeletonTheme>

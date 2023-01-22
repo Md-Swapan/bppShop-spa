@@ -5,7 +5,7 @@ import Modal from "react-modal";
 import QuickViewModal from "../../QuickViewModal/QuickViewModal";
 import defaultProImg from "../../../Assets/Images/defaultImg.jpg";
 import { useDispatch } from "react-redux";
-import { addToCart } from "./../../../Redux/Actions/CartAction";
+import { addItemsToCart } from "./../../../Redux/Actions/CartAction";
 Modal.setAppElement("#root");
 
 const customStyles = {
@@ -39,6 +39,7 @@ const ProductCard = ({ product }) => {
   };
 
   const dispatch = useDispatch();
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <>
@@ -51,7 +52,7 @@ const ProductCard = ({ product }) => {
               alt=""
             />
             <div className="product-card-body-content">
-              <small>{name.toString().substring(0, 25)}...</small>
+              <small>{name?.toString().substring(0, 25)}...</small>
               <br />
               <div className="product-card-body-content-unit-price">
                 <span>
@@ -78,7 +79,10 @@ const ProductCard = ({ product }) => {
           </div>
 
           <div className="card-footer product-card-footer">
-            <button onClick={() => dispatch(addToCart(product))} type="">
+            <button
+              onClick={() => dispatch(addItemsToCart(product, quantity))}
+              type=""
+            >
               <i className="bi bi-cart-plus"></i> Add To Cart
             </button>
           </div>

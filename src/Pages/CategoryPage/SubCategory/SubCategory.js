@@ -6,7 +6,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 const SubCategory = ({ allCategory, loading }) => {
   const { slug } = useParams();
-  const subCategories = allCategory.find((item) => item.slug === slug);
+  const subCategories = allCategory?.find((item) => item.slug === slug);
 
   return (
     <>
@@ -46,7 +46,7 @@ const SubCategory = ({ allCategory, loading }) => {
               ) : (
                 subCategories?.childes?.map((subcategory) => (
                   <SubCategoryCard
-                    key={subcategory.id}
+                    key={subcategory?.id}
                     subcategory={subcategory}
                   />
                 ))

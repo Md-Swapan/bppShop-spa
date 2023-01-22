@@ -30,8 +30,8 @@ const Category = ({ allCategory, loading }) => {
                   <Skeleton height="335px" borderRadius="10px" count={1} />
                 </>
               ) : (
-                allCategory.map((category) => (
-                  <CategoryCard key={category.id} category={category} />
+                allCategory?.map((category) => (
+                  <CategoryCard key={category?.id} category={category} />
                 ))
               )}
             </SkeletonTheme>

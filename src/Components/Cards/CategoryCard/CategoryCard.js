@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import defaultProImg from "../../../Assets/Images/defaultImg.jpg";
 
 const CategoryCard = ({ category }) => {
-  // console.log(category);
   const { img, name, id, slug } = category;
   const navigate = useNavigate();
 

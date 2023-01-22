@@ -7,8 +7,14 @@ import Cart from "../../Components/Cart/Cart";
 import CartDetailsView from './../../Components/Cart/CartDetailsView/CartDetailsView';
 
 const Layout = ({ children }) => {
+
+  // const CartDetailsCloseHandler = () => {
+  //   document.querySelector(".cartDetailsView-container").style.display = "none";
+  //   document.querySelector(".cart").style.display = "block";
+  // };
+  
   return (
-    <div>
+    <div >
       <Nav />
       <HomeFilterBtnHeader />
       <main className="layout_container">{children}</main>

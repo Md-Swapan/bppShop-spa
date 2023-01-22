@@ -10,6 +10,7 @@ const SubCategoryCard = ({ subcategory }) => {
       navigate(subSlug);
     }
   };
+ 
 
   return (
     <div

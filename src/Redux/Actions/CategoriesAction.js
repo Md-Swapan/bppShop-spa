@@ -3,7 +3,7 @@ import {
   ALL_CATEGORY_SUCCESS,
   ALL_CATEGORY_FAIL,
   CLEAR_CATEGORY_ERROR,
-} from "../Constants/CategoryConstants";
+} from "../TypeConstants/CategoryConstants";
 import axios  from 'axios';
 import { baseUrl } from "../../BaseUrl/BaseUrl";
 
